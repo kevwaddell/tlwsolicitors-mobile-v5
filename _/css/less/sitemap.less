@@ -2,25 +2,27 @@
 text-align: center;
 		
 	input.form-control {
-	.no-rounded;
+	.rounded(8px);
 	.border-col(@gray);	
 	margin-left: auto;
 	margin-right: auto;
 	.mag-bot(1);
 	text-align: center;
-	.max-w(30);
+	.max-w(50);
+	.h(5);
 	}
 	
 	.search-submit {
+	.rounded(8px);
 	.mag-auto;
 	width: 100%;
 	.no-border;
 	.bg-col(@grayDk);
 	.col(white);
-	.h(4);	
+	.h(5);	
+	.w(50);
 	.pad-all(0);
-	text-align: left;
-	.indent(1);
+	.mag-all(0);
 	
 		&:hover, &:active, &:focus {
 		.bg-col(@gray);	
@@ -28,23 +30,17 @@ text-align: center;
 	}
 	
 	.search-btn-wrap {
-	.mag-auto;	
-	width: 100%;
+	.w(50);
+	.mag-auto;
 	.rel;
-	.max-w(30);
-		&:after {
-		.block;
-		content: "\f0a9";	
-		font-family: FontAwesome;
+		.btn-pointer {
 		.abs;
-		.h(4);
 		.right(2);
 		.top(0);
-		.col(white);
-		.font-size(1.6);	
-		.line-h(4);
+		.line-h(5);
+		.col(white);	
 		}
-	}
+	}	
 }
 
 #site-map-lists {

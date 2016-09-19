@@ -1,37 +1,25 @@
 .post-list {	
-	
-	.well {
-	.mag(1.5;1.5;0;1.5);	
-	}
-
 	article.post, article.page {	
 	//.mag-bot(2);
 	.border-bot(@gray, 0.1);
-	.pad-left(1.5);
-	.pad-right(1.5);
+	.pad-top(2);
+	.pad-bot(2);
 	
 	&:last-child {
 	.mag-bot(0);	
+	.no-border;
 	}
 	
-		a {
-		.block;
-		.rel;
-		.no-text-dec;
-		.pad-top(1.5);
-		.pad-bot(1.5);
-		
 		h4 {
 		.col(@grayDk);	
-		.bold;
-		.font-size(1.8);
-		.line-h(2);
-		.mag-bot(0.5);
+		.normal;
+		.font-size(3);
+		.line-h(3.5);
 		}
 		
 		p {
-		.font-size(1.4);
-		.line-h(1.6);
+		.font-size(1.6);
+		.line-h(2);
 		.col(@grayDk);	
 		.mag-bot(0);
 		}
@@ -39,35 +27,56 @@
 		time {
 		.col(@red);
 		.block;
-		.mag-bot(0.5);
-		.font-size(1.2);
-		.caps;
+		.mag-bot(1);
+		text-align: center;
+			span {
+			.block;	
+			}
+			
+			span.month, span.year {
+			.bg-col(@gray);
+			.col(white);
+			.caps;
+			.font-size(1.2);
+			.line-h(2);
+			}
+			
+			span.day {
+			.bg-col(lighten(@gray, 20%));
+			.col(@redMid);
+			.bold;
+			.font-size(3);	
+			.line-h(5);
+			.border-top(white; 0.4);
+			.border-bot(white; 0.4);
+			}
 		}
-		
+	
+		a {
+		.rel;
+		.no-text-dec;
+		.mag-top(1.5);
+		.pad-all(0);
+		.line-h(4);
+		text-align: left;
+		.indent(1.5);
+		.no-border;
+		.no-rounded;
+		.bg-col-red;
+		.txt-col-wht;
+		.font-slab-serif;
+		.caps;
+		.bold;
+		.font-size(1.6);
+			i {
+			.fright;
+			.line-h(4);
+			.pad-right(1.5);	
+			.font-size(1.6);
+			}
+				
 			&:hover, &:active, &:focus {
-				
-					&:after {
-					content: "\f0a9";	
-					font-family: FontAwesome;	
-					.col(@red);
-					.trans-bg(white; 0.8); 
-					.font-size(2);	
-					width: 100%;
-					height: 100%;
-					.line-h(10);
-					.abs;
-					.top(0);
-					.left(0);
-					text-align: center;
-					}	
-				
-				p {
-				.col(@gray);		
-				}
-				
-				time{
-				.col(@redMid);	
-				}
+			.bg-col-red-dk;	
 			}	
 		}
 	}
@@ -76,18 +85,35 @@
 
 .search-list {
 
-article.post, article.page {
-	a {
+	article.post, article.page {
 		h4 span.search-everything-highlight-color {
-			.col(white);
-			.pad(0; 0.5; 0; 0.5);	
+		.col(white);
+		.pad(0; 0.5; 0; 0.5);	
+		}
+			
+		time {
+		text-align: left;	
 		}	
-		
+			
 		p span.search-everything-highlight-color {
 		.col(white);	
 		.pad(0; 0.2; 0; 0.2);	
 		}
-	}
-}	
+	}	
 	
+}
+
+.posts-message {
+.bg-col-red;
+.txt-col-wht;
+	h3 {
+	.font-size(5);	
+	.line-h(5.5);
+	.txt-col-wht;
+	}	
+	
+	p {
+	.font-size(2);
+	.line-h(3);
+	}
 }

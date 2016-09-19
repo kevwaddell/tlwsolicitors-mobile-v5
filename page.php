@@ -1,60 +1,67 @@
-<?php get_header(); ?>
-
-<?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
-
-<?php 
-$color = get_field('page_colour');
-$form_active = get_field('form_activated');
-$hide_title = get_field('hide_title'); 
-$number_pos = get_field('tel_num_position');
-//echo '<pre>';print_r($brochure);echo '</pre>';
-?>	
-
-	<?php if ( has_post_thumbnail() ) { ?>
-	<?php include (STYLESHEETPATH . '/_/inc/pages/page-wide-feat-img.php'); ?>
-	<?php } ?>
+<?php get_header(); ?>	
+	
+	<?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
+	<?php 
+		$color = get_field('page_colour');
+		$page_icon = get_field('page_icon');
+		$how_it_works_active = get_field('hiw_active');
+		$active_sections = get_field('active_sections');
+		$banner_active = false;	
+		$quick_links = array();
+		
+		if ( has_post_thumbnail() ) {
+		$img_post = get_the_ID();
+		}
+		
+		if ($active_sections && in_array("Page banner", $active_sections)) {
+		$banner_active = true;	
+		$banner_bg = get_field('banner_bg');
+		$banner_quick_links = array();
+		}
+	?>	
 	
 	<!-- MAIN CONTENT START -->
-	<div class="container-fluid">
-	
-		<div class="content">
-
-			<?php 
-			$related_pages = get_field('page_links'); 
-			$hide_title = get_field('hide_title'); 
-			?>	
-			 <main class="page-col-<?php echo (!empty($color)) ? $color : 'red'; ?> animated fadeIn">
-	
-				<article <?php post_class(); ?>>
-					
-					<?php if ($hide_title != 1) { ?>
-						<h1><?php the_title(); ?></h1>
-					<?php } ?>
-					
-					<div class="main-txt">
-					<?php the_content(); ?>
-					</div>
-					
-					<?php if ($form_active) : 
-					$form = get_field('form');	
-					?>
-					<div class="contact-form">
-						<div class="well well-lg">
-						<?php gravity_form($form->id, false, false, false, null, true); ?>	
-						</div>		
-					</div>	
-					
-					<?php endif; ?>
-					
-				</article>
-			 	
-			 </main>
-
-
-		</div><!-- CONTENT END -->
+	<main>
 		
-	</div><!-- MAIN CONTENT CONTAINER END -->
-						
+		<!-- BANNER SECTION -->
+		<?php if ($banner_active && $banner_bg == 'slim-img') { ?>
+			<?php include (STYLESHEETPATH . '/_/inc/banners/img-banner-slim.inc'); ?>		
+		<?php } ?>
+		
+		<?php if ($banner_active && $banner_bg == "video") { ?>
+			<?php include (STYLESHEETPATH . '/_/inc/banners/video-banner.inc'); ?>		
+		<?php } ?>
+		
+		<?php if ($banner_active && $banner_bg == "img") { ?>
+			<?php include (STYLESHEETPATH . '/_/inc/banners/img-banner.inc'); ?>		
+		<?php } ?>
+		
+		
+		<!-- MAIN TEXT SECTION -->
+		<?php include (STYLESHEETPATH . '/_/inc/sections/main-content-section.inc'); ?>
+		
+		<?php if ($active_sections) { ?>		
+		<?php foreach ($active_sections as $section) { ?>
+			<?php 
+			switch($section){
+				case "Downloads": include (STYLESHEETPATH . '/_/inc/sections/downloads-section.inc');
+				break;
+				case "Form": include (STYLESHEETPATH . '/_/inc/sections/form-section.inc');
+				break;
+				case "Services": include (STYLESHEETPATH . '/_/inc/sections/services-section.inc');
+				break;
+				case "Blog posts": include (STYLESHEETPATH . '/_/inc/sections/blog-section.inc');
+				break;
+				case "Feedback": include (STYLESHEETPATH . '/_/inc/sections/feedback-section.inc');
+				break;
+				case "Toolkit Links": include (STYLESHEETPATH . '/_/inc/sections/toolkit-section.inc');
+				break;
+			}	
+			?>
+		<?php } ?>
+		<?php } ?>
+		
+	</main>	
 	<?php endwhile; ?>
 	<?php endif; ?>
 

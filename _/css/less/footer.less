@@ -1,25 +1,47 @@
 #footer-info {
+.fixed;
+.left(0);
+.bottom(0);
+width: 100%;
+.h(10);
 .bg-col(@grayDk);
-.pad-bot(6.5);
 .col(white);
-	
+.border-top(@wht; 0.4);
+
+	&:before {
+	content: "";
+	.abs;
+	.bottom(10);
+	.left(0);
+	width: 100%;
+	.bg-col(@wht);
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+	background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); 
+	.h(5);	
+	}
+
 	.social-links {
-	.mag-bot(2);	
+	//.mag-top(2);	
 		
 		ul {
 		list-style: none;
 		.pad-left(0);
+		text-align: center;
 		}	
 		
 		li {
-		.fleft;
-		width: 25%;
+		.in-block;	
+		.mag-left(0.5);
+		.mag-right(0);
 		}
 		
 		a {
-		.col(white);
+		.bg-col(white);
+		.col(@grayDk);
 		.block;
-		.h(4);
+		.w(3.5);
+		.h(3.5);
+		.rounded(20px);
 		.no-text-dec;
 			
 			span {
@@ -28,61 +50,39 @@
 			
 			i {
 			.block;
-			.h(4);	
-			.line-h(4);
-			font-size: 1.8em;
+			.w(3.5);
+			.h(3.5);	
+			.line-h(3.5);
+			font-size: 1.3em;
 			text-align: center;
 			}	
 			
 			&:hover, &:active, &:focus {
 			.bg-col(@red);
-			}
-		}
-		
-		li.twitter {
-			a {
-			.bg-col(@twitter_blue);	
-				&:hover, &:active, &:focus {
-				.bg-col(darken(@twitter_blue, 10%));
-				}
-			}
-		}
-		
-		li.fbook {
-			a {
-			.bg-col(@facebook_blue);	
-				&:hover, &:active, &:focus {
-				.bg-col(darken(@facebook_blue, 10%));
-				}
-			}
-		}
-		
-		li.linkedin {
-			a {
-			.bg-col(@linkedin_blue);	
-				&:hover, &:active, &:focus {
-				.bg-col(darken(@linkedin_blue, 10%));
-				}
-			}
-		}
-		
-		li.google {
-			a {
-			.bg-col(@google_orange);	
-				&:hover, &:active, &:focus {
-				.bg-col(darken(@google_orange, 10%));
-				}
+			.col(white);
 			}
 		}
 	}
 	
+	.notices {	
+	.font-size(1.1);
+	text-align: center;	
+	.pad-top(1);
+	.pad-bot(1);
+		span {
+		.in-block;
+		.line-h(1.4);	
+		}
+	}
+	
 	.lexcel-logo {
-	margin: 0px auto 20px;
-	.w(10);
-	.h(5.5);	
+	.fleft;
+	.h(7.5);	
+	.mag-top(1);
+	width: 100%;
 	.bg-size(contain);
 	.bg-repeat(no-repeat);
-	background-position: center center;
+	background-position: left top;
 		
 		a {
 		.block;
@@ -92,42 +92,24 @@
 	}
 	
 	.headway-logo {
+	.abs;
+	.right(-2.5);
+	.bottom(-14);
 	margin: 0px auto 20px;
-	.w(10);
-	.h(10);
+	.border(@grayDk; 0.4);
+	.w(15);
+	.h(15);
 	.bg-col(white);	
 	.rounded(100%);
-	.bg-size(90%);
+	.bg-size(70%);
 	.bg-repeat(no-repeat);
-	background-position: center center;
+	background-position: 15px 15px;
 		
 		a {
 		.block;
 		height: 100%;
 		.indent(-999);	
 		}
-	}
-	
-	.copyright {
-	text-align: center;
-		br {
-		.none;	
-		}
-	}
-	
-	.compliance-notice {	
-	text-align: center;
-	.mag-bot(0.5);
-		a {
-		.col(white);
-			&:hover, &:active, &:focus {
-			.col(@red);
-			}	
-		}
-	}
-	
-	.copyright {
-	text-align: center;
 	}
 	
 }

@@ -27,6 +27,8 @@
 </head>
 
 <body>
+	
+			
 	<div class="col-strip">
 		<div class="col-block col-purple"></div>
 		<div class="col-block col-green"></div>

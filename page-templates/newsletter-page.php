@@ -4,45 +4,49 @@ Template Name: Newsletter sign up template
 */
 ?>
 <?php get_header(); ?>
-
-<?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
 	<!-- MAIN CONTENT START -->
-	<div class="container-fluid">
-	
-		<div class="content">
 
-
+			<?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
 			<?php 
-			$form = get_field('form');
-			$hide_title = get_field('hide_title'); 
+			$all_forms_active = get_field('all_forms_active', 'option');
+			$sections_active = get_field('sections_active');
+			$color = get_field('page_colour');
 			 ?>	
-			 <main class="page-col-red animated fadeIn">
-		 	
-				<article <?php post_class(); ?>>
-					<?php if ($hide_title != 1) { ?>
-						<h1><?php the_title(); ?></h1>
+			 <main class="page-col-red">
+				 	
+				<?php include (STYLESHEETPATH . '/_/inc/global/breadcrumbs.php'); ?>
+				
+				<?php if (has_post_thumbnail()) { ?>
+				<?php include (STYLESHEETPATH . '/_/inc/banners/img-banner-slim.inc'); ?>			
+				<?php } ?>	
+
+				<!-- MAIN TEXT SECTION -->
+				<?php include (STYLESHEETPATH . '/_/inc/sections/main-content-section.inc'); ?>
+					
+				
+					<?php if ($sections_active) { 
+					$sections = get_field('sections'); 
+					?>		
+		
+					<?php foreach ($sections as $section) { ?>
+						
+						<?php if ($section['acf_fc_layout'] == 'form-section') { ?>
+						<!-- FORM SECTION -->
+							<?php include (STYLESHEETPATH . '/_/inc/sections/form-section.inc'); ?>		
+						<?php } ?>
+						
+						<?php if ($section['acf_fc_layout'] == 'blog-posts') { ?>
+						<!-- FORM SECTION -->
+							<?php include (STYLESHEETPATH . '/_/inc/sections/blog-section.inc'); ?>		
+						<?php } ?>
+			
 					<?php } ?>
-					
-					<div class="main-txt">
-					<?php the_content(); ?>
-					</div>
-					
-					<?php if ($form) { ?>
-					
-					<?php gravity_form($form->id, false, false, false, null, true); ?>
-					
-					<?php }  ?>
-					
-				</article>
+				
+				<?php } ?>
+
 			 
 			 </main>
-
-
-		</div><!-- CONTENT END -->
-		
-	</div><!-- MAIN CONTENT CONTAINER END -->
-
-<?php endwhile; ?>
-<?php endif; ?>
+			<?php endwhile; ?>
+			<?php endif; ?>
 
 <?php get_footer(); ?>

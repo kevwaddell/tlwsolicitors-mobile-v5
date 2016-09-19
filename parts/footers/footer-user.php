@@ -13,7 +13,6 @@
 			
 		</noscript>
 
-				
 		<?php wp_footer(); ?>
 
 	</body>

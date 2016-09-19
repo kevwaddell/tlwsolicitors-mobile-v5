@@ -3,56 +3,63 @@
 <?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
 <?php 
 $freephone_num = get_field('freephone_num', 'option');
-$number_pos = get_field('tel_num_position');
-//echo '<pre>';print_r($number_pos);echo '</pre>';
-$form = get_field('form');
-$form_active = get_field('form_activated');
+$form = get_field('lp_form');
+$form_active = get_field('lp_form_active');
 $color = get_field('page_colour');
 $page_icon = get_field('page_icon');
-$on_page_script = get_field('on_page_script');
 $hide_title = get_field('hide_title'); 
-//echo '<pre>';print_r($color);echo '</pre>';
- ?>	
- 
-<?php if (!empty($on_page_script)) { ?>
-<?php echo $on_page_script; ?>
-<?php } ?>
-
-<main class="page-wrapper page-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
-		 	
- 	<article <?php post_class(); ?>>
-		 			
-	 	<div class="entry entry-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
-		 	
-		 	<?php if ($hide_title != 1) { ?>
-			<h2><?php the_title(); ?></h2>
-			<?php } ?>
-			
-			<div class="main-txt">
-			<?php the_content(); ?>
-			</div>
-			
-	 	</div>
-	 	
-		 <?php get_template_part( 'parts/sidebars/sidebar', 'landing-page' ); ?>	
-		 
-		 <?php if ($number_pos == 'bottom' || $number_pos == 'sidebar') { ?>
-		<p class="tel-num tel-num-<?php echo (!empty($color)) ? $color : 'red'; ?>">Call us <span>free <a href="tel:<?php echo str_replace(' ', '', $freephone_num); ?>" onclick="ga('send', 'event','Freephone click', 'tap', '<?php echo $post->post_title; ?> - Call back')" title="Call us now"><?php echo $freephone_num; ?></a></span></p>
-	<?php } ?>
-
-	</article> 	
+$all_forms_active = get_field('all_forms_active', 'option');
+ ?>			
+<!-- MAIN CONTENT START -->
 	
+<main id="main-content" class="page-wrapper page-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
+	<div class="lp-header bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
+		<div class="container">
+			<h1 class="text-center"><?php the_title(); ?></h1>
+		</div>
+	</div>	 	
+ 	<article <?php post_class(); ?>>
+		<div class="container-fluid">	
+			
+			<div class="row">
+				 	
+			 	<div class="col-md-10 col-md-offset-1">
+						
+				 	<div class="entry entry-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
+						
+						<div class="main-txt">
+						<?php the_content(); ?>
+						</div>
+						
+				 	</div>
+				 
+			 	</div>
+		
+			</div>
+								 	
+			<?php include (STYLESHEETPATH . '/_/inc/sections/sidebar-landing-page.inc'); ?>
+			
+		</div>
+	</article> 	
+
 	
 </main>
 		
 <?php endwhile; ?>
 <?php endif; ?>
-
-</div>
-
-</div>
 <!-- MAIN CONTENT END -->
 
+<?php if (!empty($freephone_num)) { ?>
+	<div class="contact-details">
+	<?php include (STYLESHEETPATH . '/_/inc/sections/global-telephone-number.inc'); ?>		
+	<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.inc'); ?>
+	</div>
+<?php } ?>
+
 </div>
 
-<?php get_footer(); ?>
+<?php if ($form_active && $all_forms_active) { ?>
+<?php include (STYLESHEETPATH . '/_/inc/landing-page/contact-form-modal.inc'); ?>	
+<?php } ?>
+
+<?php get_template_part( 'parts/footers/footer', 'landing-page' ); ?>

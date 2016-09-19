@@ -1,38 +1,40 @@
 <?php get_header(); ?>
-	
-<div class="content for-posts-list">
+
+<!-- MAIN CONTENT START -->
 
 <?php
 $news_page_id = get_option('page_for_posts');
 $news_page = get_page($news_page_id);
-//echo '<pre>';print_r($news_page);echo '</pre>';
 $page_icon = get_field('page_icon', $news_page->ID);
-
-$topics_args = array(
-'taxonomy'           => 'category'
-);
-
-$topics = get_categories($topics_args);
+	
+	if ( has_post_thumbnail($news_page_id) ) {
+	$img_post = get_page($news_page_id);
+	}
 ?>
-	<div id="search-form" class="post-search">
-	<?php get_search_form(); ?>
-	</div>
+
+<!-- PAGE TOP SECTION -->
+<main class="page-col-red">
 	
-	<?php include (STYLESHEETPATH . '/_/inc/posts/cats-dropdown.php'); ?>	
+	<?php include (STYLESHEETPATH . '/_/inc/global/breadcrumbs.php'); ?>
 	
-	<main class="page-col-red animated fadeIn">
+	<?php if ($img_post) { ?>
+	<?php include (STYLESHEETPATH . '/_/inc/banners/blog/img-banner-index-pg.inc'); ?>		
+	<?php } ?>
+	
+	<?php include (STYLESHEETPATH . '/_/inc/sections/global-telephone-number.inc'); ?>		
+	
+	<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.inc'); ?>
 		
-		<article class="page">
+	<?php include (STYLESHEETPATH . '/_/inc/posts/index-top-bar.inc'); ?>
+	
+	<!-- CATEGORY LIST -->
+	<?php include (STYLESHEETPATH . '/_/inc/posts/index-post-list.inc'); ?>	
+	
+	<!-- SOCIAL FEED LARGE -->
+	<?php include (STYLESHEETPATH . '/_/inc/posts/social-feed-slider.inc'); ?>
 			
-				<!-- CATEGORY LIST -->
-				<?php include (STYLESHEETPATH . '/_/inc/posts/category-post-list.php'); ?>				
-				
-				<?php get_sidebar(); ?>
-			
-		</article>
-		
-	</main>		
-			
-</div><!-- CONTENT END -->
+	
+</main>		
+<!-- MAIN CONTENT CONTAINER END -->
 	
 <?php get_footer(); ?>

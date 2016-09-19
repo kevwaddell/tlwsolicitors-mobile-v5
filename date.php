@@ -1,41 +1,38 @@
 <?php get_header(); ?>
 
-<div class="content for-posts-list">
-<?php 
-$archives_args = array(
-	'type'            => 'monthly',
-	'limit'			  => 6,
-	'echo'            => 0,
-	'format'		 => 'option'
-	);
+<!-- MAIN CONTENT START -->
 
-
-if (is_year()) {
-$archives_args['type'] = 'yearly';
-$archives_args['limit'] = 5;
-}
-
-$archives = wp_get_archives($archives_args);
+<?php
+$news_page_id = get_option('page_for_posts');
+$news_page = get_page($news_page_id);
+$page_icon = get_field('page_icon', $news_page->ID);
+	
+	if ( has_post_thumbnail($news_page_id) ) {
+	$img_post = get_page($news_page_id);
+	}
 ?>
-	<div id="search-form" class="post-search">
-	<?php get_search_form(); ?>
-	</div>
-	
-	<?php include (STYLESHEETPATH . '/_/inc/posts/archive-dropdown.php'); ?>	
-	
-	<main class="page-col-red animated fadeIn">
-		
-		<article class="page">
 
-			<!-- ARCHIVE LIST -->
-			<?php include (STYLESHEETPATH . '/_/inc/posts/archive-post-list.php'); ?>
-		
-			<?php get_sidebar(); ?>
-			
-		</article>
+<main class="page-col-red">
 	
-	</main>
-			
-</div><!-- CONTENT END -->
+	<?php include (STYLESHEETPATH . '/_/inc/global/breadcrumbs.php'); ?>
+	
+	<?php if ($img_post) { ?>
+	<?php include (STYLESHEETPATH . '/_/inc/banners/blog/img-banner-index-pg.inc'); ?>		
+	<?php } ?>
+	
+	<?php include (STYLESHEETPATH . '/_/inc/sections/global-telephone-number.inc'); ?>		
+	
+	<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.inc'); ?>
+	
+	<!-- PAGE TOP BAR SECTION -->
+	<?php include (STYLESHEETPATH . '/_/inc/posts/index-top-bar.inc'); ?>	
+	
+	<!-- POSTS LIST -->
+	<?php include (STYLESHEETPATH . '/_/inc/posts/index-post-list.inc'); ?>	
+	
+	<!-- SOCIAL FEED -->
+	<?php include (STYLESHEETPATH . '/_/inc/posts/social-feed-slider.inc'); ?>
+
+</main>
 
 <?php get_footer(); ?>

@@ -1,5 +1,6 @@
+
 #awards-pop-up {
-.h(6.4);
+.h(10.4);
 .bg-col(@awardsGreen);	
 .over-hide;
 .transition(0.3s, ease-out);
@@ -7,13 +8,13 @@
 .inner-shadow(0, -5px, 10px, 0.5);
 
 	&.open {	
-	.h(6.4);	
+	.h(10.4);	
 	}
 	&.closed {
 	.h(0);	
 	}
 	#awards-pop-up-inner {
-	.h(6.4);	
+	.h(10.4);	
 	.border-bot(@wht; 0.4);
 	.col(@wht);
 	
@@ -25,7 +26,7 @@
 		.inner-right {
 		.fright;
 		.bg-img('law-awards-text-right-2016.png');
-		background-position: 5px center;	
+		background-position: left center;	
 		.bg-repeat(no-repeat);
 		.bg-size(90%);
 			@media screen and (orientation: landscape) {
@@ -35,30 +36,27 @@
 		
 		.inner-left {
 		.fleft;	
-		.pad-right(0.5);
+		.pad-right(1);
 		.bg-col(@wht);
 		}
 		
 		#nla-logo {
+		.fright;
 		height: 100%;
-		width: 100%;
+		.w(30);
 		.bg-img('northern-Law-Awards-logo.png');
 		.bg-repeat(no-repeat);
 		background-position: right center;
-		.bg-size(90%);
-			@media screen and (orientation: landscape) {
-			.bg-size(contain);	
-			}	
+		.bg-size(contain);	
 		}
 	}
 	
 	button#close-awards-btn {
 	.abs;	
-	.font-size(1.2);
-	.right(.5);
-	.top(.5);
-	.w(2);
-	.h(2);
+	.right(1);
+	.top(1);
+	.w(3);
+	.h(3);
 	.pad-all(0);
 	.rounded(100%);
 	.col(@awardsGreen);

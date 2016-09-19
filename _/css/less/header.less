@@ -1,27 +1,32 @@
 header[role="banner"] {
 .bg-col(white);	
+.abs;
+.top(0);
+.left(0);
+width: 100%;
+.h(8);
+z-index: 2;
 //.over-hide;
+
+	&:after {
+	content: "";
+	.abs;
+	width: 100%;
+	.border(@grayDk; 0.2);
+	.left(0);
+	.bottom(-0.2);	
+	}
 	
 	.logo {
 	.mag-all(0);
-		
 		a {
 		.block;
-		.h(6);
-		.max-w(25);
+		.h(8);
+		width: 100%;
 		.bg-img("tlw-logo-wide.png");
 		.bg-repeat(no-repeat);
-		background-position: left center;
-		
-			@media
-				only screen and (-webkit-min-device-pixel-ratio: 1.5),
-				only screen and (   min--moz-device-pixel-ratio: 1.5),
-				only screen and (     -o-min-device-pixel-ratio: 3/2),
-				only screen and (        min-device-pixel-ratio: 1.5){ 
-				.bg-img("x2/tlw-logo-wide-x2.png");
-				.bg-size(contain);
-			}
-			
+		background-position: center center;
+
 			&:hover, &:active, &:focus{
 			.opacity(0.5);	
 			}
@@ -36,57 +41,25 @@ header[role="banner"] {
 	//.border-bot(white; 0.1);
 	}
 	
-	span.contact-link {
-	.block;
-	.font-size(1.4);
-	.line-h(4);	
-	text-align: center;
+	span.tag-line {
+	text-align: left;
 	.fleft;
-	//.border-bot(white; 0.1);
-	
-		&.rs {
-		width: 60%;
-			@media screen and (orientation: landscape) {
-			width: 50%;	
-			}
-		}
-		
-		&.ls {
-		width: 40%;
-			@media screen and (orientation: landscape) {
-			width: 50%;	
-			}
-		}
-				
-		i {
-		.col(@red);	
-		}
-		
-		a {
-		.col(white);
-			&:hover, &:active, &:focus {
-			.col(@red);
-			}
-		}
-		
+	.font-size(1.6);
+	.line-h(8);	
+	.caps;
+	.txt-col-grayDk;
+	.font-slab-serif;
 	}
 	
-	.nav-action {
-	//.pad-top(1.2);
-	.mag-right(-1.5);
-		
-		#nav-btn {
-		.rounded(0px);
-		.no-border;
-		.w(6);
-		.h(6);
+	.header-action-btns {
+	.pad-top(1.8);
+			
+		.btn {
+		.no-rounded;
+		.txt-col-grayDk;
+		.w(4);
+		.h(4);
 		.pad-all(0);
-		.bg-col(@trans);
-		
-			&.in-active {
-			.bg-col(@trans);
-			.col(@red);	
-			}
 		}
 
 	}
