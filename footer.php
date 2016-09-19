@@ -1,19 +1,20 @@
-	
+		<?php 
+		$freephone_num = get_field('freephone_num', 'option');
+		$contact_pg = get_page_by_title( "Contact us");
+		$location = get_field('global_location', 'options');
+		//echo '<pre>';print_r($contact_pg);echo '</pre>';
+		?>
 		<!-- FOOTER START -->
-		<section id="footer-info">
-		
-			<footer class="container-fluid">
-										
-			<div class="notices">
-				<span>Authorised and regulated by the <a title="Solicitors Regulation Authority" href="http://www.sra.org.uk" target="_blank">Solicitors Regulation Authority</a>.<br /> 
-				&copy; <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?>. All rights reserved.</span>
-			</div>
-			
-			<?php wp_nav_menu(array( 'container_class' => 'social-links clearfix', 'theme_location' => 'social_links_menu', 'fallback_cb' => false ) ); ?>
-				
-			</footer>
-			
-		</section>
+		<footer id="footer-nav">
+			<nav class="links">
+				<?php if (!empty($freephone_num)) { ?>
+				<a href="tel:<?php echo str_replace(' ', '-', $freephone_num); ?>" onclick="ga('send', 'event','Freephone click', 'tap', '<?php echo $post->post_title; ?> - Call back')" title="Call us now"><i class="fa fa-phone"></i><span class="title">Call us</span></a>
+				<?php } ?>
+				<a href="<?php echo get_permalink( $contact_pg->ID ); ?>" title="Contact us"><i class="fa fa-envelope"></i><span class="title"><?php echo get_the_title( $contact_pg->ID ); ?></span></a>
+				<a href="geo:<?php echo $location['lat']; ?>,<?php echo $location['lng']; ?>" title="Find us" target="_blank"><i class="fa fa-location-arrow"></i><span class="title">Find us</span></a>
+				<a href="#search" id="search-btn" title="Search"><i class="fa fa-search fa-lg"></i><span class="title">Search</span></a>
+			</nav>
+		</footer>
 		
 </div><!-- MAIN WRAPPER END -->
 		

@@ -142,7 +142,7 @@
 		Button functions for search pop up menu
 	*/
 	
-	$('body').on(event_type,'button#search-btn', function(){
+	$('body').on(event_type,'a#search-btn', function(){
 	
 		if ( $('#search-pop-up').hasClass('off') ) {
 			

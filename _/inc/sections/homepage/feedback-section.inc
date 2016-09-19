@@ -2,8 +2,7 @@
 $feedback_active = $section['feedback_active'];
 ?>
 <?php if ($feedback_active) { 
-$testimonials = $section['testimonials'];	
-$quick_links[] = ['link_title' => "Client feedback", 'link_anchor' => 'feedback'];	 
+$testimonials = $section['testimonials'];	 
 ?>
 <section id="<?php echo $section['acf_fc_layout']; ?>" class="pg-section">
 <a name="feedback" id="feedback" class="section-target"></a>

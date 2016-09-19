@@ -7,7 +7,6 @@
 		$how_it_works_active = get_field('hiw_active');
 		$active_sections = get_field('active_sections');
 		$banner_active = false;	
-		$quick_links = array();
 		
 		if ( has_post_thumbnail() ) {
 		$img_post = get_the_ID();
