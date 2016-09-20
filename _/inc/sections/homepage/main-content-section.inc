@@ -14,15 +14,11 @@ $section_title = "TLW introduction";
 					
 	<?php include (STYLESHEETPATH . '/_/inc/sections/global-telephone-number.inc'); ?>		
 	
-	<div class="container">
-		
-		<div class="row">
-			
-			<div class="col-xs-10 col-xs-offset-1">	
-		
-				<div class="entry wide-entry">
+	<div class="container-fluid">
+
+		<div class="entry wide-entry">
 			<div class="main-txt home">
-			<?php the_content(); ?>
+				<?php the_content(); ?>
 			</div>	
 			
 			<div class="info-links">
@@ -32,14 +28,10 @@ $section_title = "TLW introduction";
 
 				<a href="<?php echo get_permalink($feedback_pg->ID); ?>" class="btn btn-default btn-block"><i class="fa <?php echo $feedback_pg_icon; ?> fa-lg"></i> Client Feedback</a>	
 			</div>
-			
-			<button id="intro-scroll-down-btn"><i class="fa fa-angle-down"></i><span class="sr-only">Go down to next section</span></button>
 												
 		</div>
 		
-			</div>
 			
-		</div>
 	
 	</div>
 	

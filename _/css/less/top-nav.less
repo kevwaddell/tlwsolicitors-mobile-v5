@@ -1,8 +1,9 @@
 #top-nav {
 overflow: hidden;
 .rel;
-.bg-col-gray;	
-.inner-shadow( 0, 5px, 10px, 0.7);
+//.bg-col-gray;
+.gradient(@gray, @grayDk, @gray);	
+//.inner-shadow( 0, 5px, 10px, 0.7);
 
 	&.nav-closed {
 	height: 0px;
@@ -10,7 +11,10 @@ overflow: hidden;
 	}
 
 	&.nav-open {
-	height: auto;
+	height:100%;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	.pad-top(5);
 	}
 	
 	a {
@@ -25,33 +29,32 @@ overflow: hidden;
 	.rel;
 	.clearfix;
 	.pad-bot(5);
+	height:100%;
 	}
 	
 	button#close-nav {
 	.pad-all(0);	
-	.abs;
-	left: 50%;
-	.bottom(-1.5);
-	.mag-left(-2.5);
-	.h(5);
-	.w(5);
-	.border-radius(100%, 0, 0, 100%);
+	.block;
+	//.abs;
+	//left: 50%;
+	//.bottom(3.5);
+	//.mag-left(-2.5);
+	.h(3);
 	.bg-col-grayDk;
 	.txt-col-gray;
+	.no-rounded;
+	.border-bot(@wht; 0.2);
 	outline: none;
-	.transition(0.3s, ease-in-out);
 		i {
-		.mag-top(-1);	
+		.mag-top(-0.2);
 		}
-		&:hover, &:active, &:focus {
+		&:active, &:focus {
 		.txt-col-wht;
-		.bottom(-0.5);
 		}
 	}	
 	
 	ul.sub-menu {
 	.list-style-gone;	
-	width: 500%;
 	}
 	
 	li.sub-open { 
@@ -70,40 +73,29 @@ overflow: hidden;
 	
 	ul.menu {
 	.clearfix;	
-	.mag-bot(0);	
-	.border-bot(@wht; 0.4);
+	//.pad-bot(3.5);	
+	.mag-bot(0);
+	height: 90%;
 		li.top-level {
-		width: 20%;
-		.fleft;
-		.rel;	
-			&:last-child {
-				> a {
-				border-right: none;	
-				}
-			}
+		.rel;
 			
 			> a {
 			.font-size(1.4);
-			.border-right(@wht; 0.4);
-			.h(15.5);
+			.border-bot(@wht; 0.2);
+			.h(4);
 			.caps;
 			.font-slab-serif-bold;
 				i {
-				.in-block;
-				.mag-top(2);
-				.mag-bot(0.5);
-				.w(7.4);
-				.h(7.4);
-				.border(@wht; 0.4);
-				.line-h(6.8);
-				.rounded(100%);
-				.font-size(3);
-				.drop-shadow(0, 3px, 10px, 0.7);
+				.fleft;
+				.w(4);
+				.h(3.8);
+				.line-h(3.8);
+				.font-size(2);
 				}
 				
 				span {
 				.block;
-				.pad-all(2);	
+				.line-h(4);	
 				}
 			}
 			
@@ -137,9 +129,6 @@ overflow: hidden;
 						}
 					}	
 				}
-				> ul.sub-menu {
-				margin-left: -100%;
-				}
 			}
 			
 			&.pink-link {
@@ -155,9 +144,6 @@ overflow: hidden;
 						.bg-col-pink;	
 						}
 					}
-				}
-				> ul.sub-menu {
-				margin-left: -200%;
 				}
 			}
 			
@@ -175,9 +161,6 @@ overflow: hidden;
 						}
 					}
 				}
-				> ul.sub-menu {
-				margin-left: -300%;
-				}
 			}
 			
 			&.blue-link {
@@ -194,22 +177,19 @@ overflow: hidden;
 						}
 					}
 				}
-				> ul.sub-menu {
-				margin-left: -400%;
-				}
 			}
 			
 			&.sub-open {
+				
 				&:after {
 				content: "";
 				.abs;
-				left: 50%;
-				.top(14.5);
+				.right(0);
+				.top(1);
 				.h(1);
-				.mag-left(-1);
-				.border-bot(@wht; 1);
-				.border-left(@trans; 1);
-				.border-right(@trans; 1);	
+				.border-bot(@trans; 1);
+				.border-top(@trans; 1);
+				.border-right(@wht; 1);	
 				}
 				
 				li > a:after {
@@ -217,8 +197,8 @@ overflow: hidden;
 				.abs;
 				.right(0);
 				.top(0);
-				.line-h(5);
-				.pad-right(2);
+				.line-h(3);
+				.pad-right(1);
 				.txt-col-gray;		
 				}
 
@@ -249,20 +229,20 @@ overflow: hidden;
 			> ul.sub-menu {
 
 				> li {
-				.border-top(@wht; 0.4);	
+				.border-bot(@wht; 0.2);	
 					> a {
 					.caps;
-					.font-size(2);	
-					.line-h(5);
+					.font-size(1.2);	
+					.line-h(3);
 					.bg-col-grayDk;
 					.rel;
 						i {
 						.abs;
 						.left(0);
 						.top(0);
-						.w(5);
-						.h(5);
-						.line-h(5);
+						.w(4);
+						.h(3);
+						.line-h(3);
 						}
 						&:hover, &:active, &:focus {
 						.bg-col(@wht);
@@ -278,23 +258,23 @@ overflow: hidden;
 					text-align: center;
 					width: 100%;
 						li {
-						.in-block;
 							a {
-							.font-size(1.6);	
+							.block;
+							.line-h(3);
+							.font-size(1.2);	
 							.bg-col(@wht);
 							.txt-col-grayDk;
-							.pad(1;7;1;2);
-							.mag(0;0.5;1;0.5);
-							.rounded(8px);
+							.pad(0;3;0;1);
 							.rel;
+							.border-top(@grayDk; 0.2);
 								&:after {
 								content: "\f105";	
 								font-family: FontAwesome;	
 								.abs;
 								.right(0);
 								.top(0);
-								.line-h(4);
-								.pad-right(2);
+								.line-h(3);
+								.pad-right(1);
 								.txt-col-red;
 								}
 								
@@ -317,9 +297,6 @@ overflow: hidden;
 							.txt-col-red;	
 							}	
 						}
-						ul.sub-menu {
-						.pad(1;2;0;2);
-						}	
 					}
 					
 					&.sub-closed {

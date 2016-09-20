@@ -1,7 +1,7 @@
 // TOOLKIT BANNER STYLES
 .toolkit-banner {
 	//.min-h(80);
-	.pad-bot(3);
+	.pad-bot(1);
 	.bg-repeat(no-repeat);
 	background-position: center center;
 	.bg-size;
@@ -13,8 +13,8 @@
 	width: 100%;
 	.caps;
 	.col(white);
-	.line-h(4);
-	.font-size(2);
+	.line-h(3);
+	.font-size(1.5);
 	.font-slab-serif;	
 	z-index: 1;
 		
@@ -41,7 +41,7 @@
 	.tk-banner-txt {
 	.rel;
 	width: 100%;
-	.pad-top(2);
+	.pad-top(1);
 	//.top(7);
 	z-index: 2;
 		h1 {
@@ -49,27 +49,27 @@
 			.caps;
 			.col(white);
 			.font-slab-serif;
-			.font-size(6.5);
-			.line-h(5.5);
+			.font-size(4.5);
+			.line-h(3.5);
 			.mag-bot(1);
 		}	
 		p.lead {
 		.bold;
 		text-align: center; 
 		.col(white);
-		.font-size(2);	
-		.line-h(3);
+		.font-size(1.6);	
+		.line-h(2);
 		.font-slab-serif;
 		.mag-bot(0);
+		
+			br {
+			.none;	
+			}
 		}
 	}
 	
 	.tk-banner-panels {
-	.pad-top(3);
-			@media screen and (orientation: landscape) {
-			.pad-top(4.5);	
-			.over-hide;
-			}
+	.pad-top(1);
 	}
 	
 	.tk-banner-panel {
@@ -77,64 +77,38 @@
 	margin-left: auto;
 	margin-right: auto;
 	.mag-bot(1);
-	.pad(1.5; 1.5; 1.5; 11);
+	.pad-all(1);
 	//.border(white; 0.4);
 	.rounded(15px);	
 	.bg-col(@wht);
 	.drop-shadow(0, 3px, 20px, 0.7);
-	width: 80%;
 	
 		@media screen and (orientation: landscape) {
-		.pad-left(1.5);
-		.min-h(26.5);	
-		.pad-all(1.5);
-		width: auto;
-		text-align: center;
+			
 		}
 				
 		i.txt-icon {
-		.abs;
-		.left(1.5);
-		.top(1.5);
-		.w(8);
-		.h(8);
-		.line-h(7.2);
-		.border(white; 0.4);
-		.rounded(100%);
-		text-align: center;	
-		.font-size(6);
-		.font-slab-serif;
-		font-style: normal;
-		.bg-col-gray;
-		.drop-shadow(0, 3px, 20px, 0.7);
-			@media screen and (orientation: landscape) {
-			.rel;
-			.block;	
-			left: auto;
-			top: auto;
-			margin: -40px auto 10px;
-			}
+		.none;
 		}
 		
 		h2 {
 		.font-cond;	
 		.caps;
-		.font-size(2);
-		.line-h(2);
-		.mag-bot(1);
+		.font-size(1.4);
+		.line-h(1.4);
+		.mag-bot(0.5);
 		.col(@grayLt);
+		text-align: center;
 			br {
 			.none;	
-			}
-			@media screen and (orientation: landscape) {
-				br {
-				.block;	
-				}
 			}
 		}
 		
 		p {
 		.txt-col-grayDk;	
+		.font-size(1.2);
+		.line-h(1.4);
+		text-align: center;
 			&:last-child {
 			.mag-bot(0);	
 			}
@@ -212,21 +186,23 @@
 
 // TOOLKIT SLIDER STYLES
 .toolkit-txt-section {
-.border-top(white; 0.4);
+.border-top(white; 0.2);
 z-index: 2;
 .rel;	
 	
 	.tk-txt {
 		.txt {
-		.pad-bot(2);
+		.pad-bot(1);
 		}
 		
 		h2.banner-header {
 		.col(white);	
-		.font-size(2.3);
-		.line-h(5);
-		.mag-bot(4);
+		.font-size(1.2);
+		.line-h(1.2);
+		.mag-bot(1.5);
 		.mag-top(0);
+		.pad-top(0.9);
+		.pad-bot(0.9);
 		.rel;
 			br {
 			.none;	
@@ -237,7 +213,7 @@ z-index: 2;
 			.left(0);
 			.top(0);
 			height: 100%;
-			.w(5);
+			.w(3);
 			.bg-repeat(no-repeat);
 			background-position: center center;
 			.bg-size;	
@@ -245,15 +221,15 @@ z-index: 2;
 		}
 		
 		h3 {
-		.font-size(4);
-		.line-h(4.5);	
-		.mag-bot(3);
+		.font-size(2);
+		.line-h(2.4);	
+		.mag-bot(1.5);
 		.mag-top(0);
 		}
 		
 		p, ul, ol {
-		.font-size(2);
-		.line-h(3);		
+		.font-size(1.4);
+		.line-h(1.8);		
 		}
 		
 		//Unordered list
@@ -299,11 +275,15 @@ z-index: 2;
 		
 		.tk-img {
 		.rel;
-		.h(20);
-		.mag-bot(2);
-		width: 50%;
-		.fright;	
-		.mag-left(2);
+		.h(12);
+		width: 70%;
+		//margin: 0px auto 10px;
+		.mag-bot(1);	
+			@media screen and (orientation: landscape) {
+			width: 40%;
+			.fright;
+			.mag-left(1);
+			}
 		}
 		
 		figure.tk-slide-img {
@@ -312,12 +292,12 @@ z-index: 2;
 		.bg-repeat(no-repeat);
 		background-position: center center;
 		.bg-size;
-		.rounded(12px);	
 		.inner-shadow(0, 0, 20px, 0.5);
 		.rel;
 		-webkit-filter: grayscale(80%);
 		filter: grayscale(80%);
 		filter: url('/wp-content/themes/tlwsolicitors-v4/_/css/desaturate.svg#greyscale');	
+		.rounded(4px);
 			&:after {
 			content: "";
 			.abs;
@@ -325,9 +305,9 @@ z-index: 2;
 			.left(0);	
 			width: 100%;
 			height: 100%;
-			.rounded(12px);	
 			.bg-img("thin-stripe-wht.png");	
 			.opacity(@opacity: 0.3);
+			.rounded(4px);
 			}
 		}
 		
@@ -337,7 +317,7 @@ z-index: 2;
 		.left(0);
 		width: 100%;
 		height: 100%;
-		.rounded(12px);	
+		.rounded(4px);
 		}
 
 	}

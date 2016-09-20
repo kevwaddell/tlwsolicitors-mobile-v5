@@ -2,7 +2,7 @@
 	<div id="social-feed-carousel" class="carousel slide" data-ride="carousel">
 		<div class="carousel-inner" role="listbox">
 			<div class="item active twitter">
-				<div class="container">
+				<div class="container-fluid">
 					<div class="row">
 						<div class="col-xs-2 text-right">
 							<i class="fa fa-twitter bg-col-twitter"></i>
@@ -15,7 +15,7 @@
 			</div>
 			
 			<div class="item google-plus">
-				<div class="container">
+				<div class="container-fluid">
 					<div class="row">
 						<div class="col-xs-2 text-right">
 							<i class="fa fa-google-plus bg-col-google-plus"></i>
@@ -27,7 +27,7 @@
 				</div>
 			</div>
 			<div class="item facebook">
-				<div class="container">
+				<div class="container-fluid">
 					<div class="row">
 						<div class="col-xs-2 text-right">
 							<i class="fa fa-facebook-f bg-col-facebook"></i>

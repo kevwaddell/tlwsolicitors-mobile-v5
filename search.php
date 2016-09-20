@@ -24,7 +24,7 @@
 				
 				<div class="post-list">
 								
-					<div class="container">	
+					<div class="container-fluid">	
 						<div class="row">
 							<div class="col-md-10 col-md-offset-1">
 								<?php while ( have_posts() ) : the_post();
@@ -54,7 +54,7 @@
 				</div><!-- End List -->
 				
 				<div class="page-links" style="margin-bottom: 40px;">
-					<div class="container">
+					<div class="container-fluid">
 						<div class="row">
 							<div class="col-md-10 col-md-offset-1">
 								<?php wp_pagenavi(); ?>
@@ -64,7 +64,7 @@
 				</div>		
 				
 				<?php else: ?>
-				<div class="container">	
+				<div class="container-fluid">	
 					<div class="row">
 						<div class="col-xs-8 col-xs-offset-2">
 						<div class="well well-lg posts-message">

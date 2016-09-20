@@ -17,24 +17,20 @@ $post_thumbnail_id = get_post_thumbnail_id( $pg->ID );
 $feat_img = wp_get_attachment_image_src($post_thumbnail_id, 'full' );
 ?>
 
-<section id="<?php echo $section['acf_fc_layout']; ?>" class="links-1 pg-section bg-col-<?php echo $color; ?>">
+<section id="<?php echo $section['acf_fc_layout']; ?>" class="pg-section links-1 bg-col-<?php echo $color; ?>">
 	
-	<a name="toolkit-links" id="toolkit-links" class="section-target"></a>
+	<h2 class="text-center section-header bg-col-grayDk"><?php echo get_the_title($toolkit_page); ?> <?php echo get_the_title($pg->ID); ?></h2>
 	
-	<div class="bg-img" style="background-image: url(<?php echo $feat_img[0] ; ?>)">
-		<div class="img-overlay"></div>
-	</div>
-	
-	<div class="container">
-		<h2 class="text-center section-header bg-col-grayDk"><?php echo get_the_title($toolkit_page); ?> <?php echo get_the_title($pg->ID); ?></h2>
+	<div class="bg-img" style="background-image: url(<?php echo $feat_img[0] ; ?>)"><div class="img-overlay"></div></div>
+
+	<div class="tk-text">
+		<div class="container-fluid">
 		<?php echo $toolkit_content; ?>
-	</div>	
-	
-	<div class="links-wrapper">
-	<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.inc'); ?>	
+		
+		
 		<a href="<?php echo get_permalink($pg->ID); ?>" class="toolkit-link link-col-<?php echo $color; ?>">	
 			<i class="fa <?php echo $page_icon; ?> link-icon"></i>
-			<span class="bg-col-<?php echo $color; ?>">View Our <?php echo get_the_title($toolkit_page); ?> Toolkit</span>
+			View our <span><?php echo get_the_title($toolkit_page); ?> Toolkit</span> 
 		</a>
 	</div>
 

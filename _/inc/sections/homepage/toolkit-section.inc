@@ -14,13 +14,10 @@ $toolkit_title = "Toolkit";
 
 //echo '<pre class="debug">';print_r($slides);echo '</pre>';
 ?>
-<section id="toolkit-section" class="pg-section links-2">
-	<a name="toolkit-links" id="toolkit-links" class="section-target"></a>
+<section id="toolkit-section" class="pg-section">
 	
-	<div class="container">
-		<h2 class="text-center section-header bg-col-grayDk">TLW <?php echo $section_title; ?></h2>
-		<div class="tk-pg-intro font-slab-serif"><?php echo $section_intro; ?></div>
-	</div>	
+	<h2 class="text-center section-header bg-col-grayDk">TLW <?php echo $section_title; ?></h2>
+	<div class="tk-pg-intro font-slab-serif"><?php echo $section_intro; ?></div>
 	
 	<div class="links-wrapper">
 	
@@ -40,7 +37,7 @@ $toolkit_title = "Toolkit";
 				</div>
 				
 				<i class="fa <?php echo $pg_icon; ?> link-icon"></i>
-				<span class="bg-col-<?php echo $pg_col; ?>"><?php echo get_the_title($link['page']); ?> <?php echo get_the_title($tk_page->ID); ?></span>
+				<span><?php echo get_the_title($link['page']); ?> <?php echo get_the_title($tk_page->ID); ?></span>
 		</a>
 		<?php } ?>
 		

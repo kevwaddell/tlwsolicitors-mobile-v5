@@ -23,11 +23,6 @@ $extra_links_cols = 4;
 				$icon = get_field( 'page_icon', $bl['link_page']);	
 				$color = get_field( 'page_colour', $bl['link_page']);
 				$title = $page->post_title;
-				$count_sp = substr_count($title, " ");
-					
-					if ($count_sp === 1) {
-					$title = str_replace(" ", "<br />", $page->post_title);
-					}
 				?>
 				<a href="<?php echo get_permalink($bl['link_page']); ?>" class="services-nav-link col-<?php echo $color; ?>"><i class="fa <?php echo $icon; ?> fa-lg"></i> <?php echo $title; ?></a>
 				<?php } ?>
@@ -39,11 +34,6 @@ $extra_links_cols = 4;
 					$icon = get_field( 'page_icon', $sl['page']);	
 					$color = get_field( 'page_colour', $sl['page']);	
 					$title = $page->post_title;
-					$count_sp = substr_count($title, " ");
-					
-					if ($count_sp === 1) {
-					$title = str_replace(" ", "<br />", $page->post_title);
-					}
 					?>
 					<a href="<?php echo get_permalink($sl['page']); ?>" class="services-extra-nav-link col-<?php echo $color; ?>"><i class="fa <?php echo $icon; ?> fa-lg"></i><?php echo $title; ?></a>
 					<?php } ?>

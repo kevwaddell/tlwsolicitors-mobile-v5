@@ -41,9 +41,7 @@
 		
 		if ( $('#top-nav').hasClass('nav-closed') ) {
 			
-			$('#quick-links-sml').animate({left: '-70px'}, 100);
-			
-			$('#top-nav').animate({height: inner_h+"px"}, 500, function(){
+			$('#top-nav').animate({height: inner_h+"px"}, 200, function(){
 			
 				$(this).toggleClass('nav-closed nav-open').removeAttr('style');	
 				
@@ -52,10 +50,9 @@
 		
 		if ( $('#top-nav').hasClass('nav-open') ) {
 			
-			$('#top-nav').animate({height: "0px"}, 500, function(){
+			$('#top-nav').animate({height: "0px"}, 200, function(){
 			
 				$(this).toggleClass('nav-closed nav-open').removeAttr('style');	
-				$('#quick-links-sml').animate({left: '20px'}, 400);
 				
 			});
 			
@@ -67,11 +64,10 @@
 	
 	$('#top-nav').on(event_type,'button#close-nav', function(){
 		
-		$('#top-nav').animate({height: "0px"}, 500, function(){
+		$('#top-nav').animate({height: "0px"}, 200, function(){
 			
 			$(this).toggleClass('nav-open nav-closed').removeAttr('style');	
 			$('li.with-sub-nav').removeClass('sub-open').addClass('sub-closed');
-			$('#quick-links-sml').animate({left: '20px'}, 400);
 			
 		});
 		

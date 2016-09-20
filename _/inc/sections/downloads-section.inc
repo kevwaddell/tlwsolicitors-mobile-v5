@@ -8,10 +8,9 @@ $section_title = $section['section_title'];
 $download_section_files = $section['download_section_files'];
 ?>
 <section id="<?php echo $section['acf_fc_layout']; ?>" class="pg-section with-icon-logo bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
-<a name="downloads" id="downloads" class="section-target"></a>
 	<div class="overlay"></div>
-	<div class="container">
-		<h2 class="text-center section-header bg-col-grayDk"><?php echo $section_title; ?></h2>
+	<h2 class="text-center section-header bg-col-grayDk"><?php echo $section_title; ?></h2>
+	<div class="container-fluid">
 			
 			<?php if ( !empty($download_section_files) ) { ?>
 			<div class="row download-items">

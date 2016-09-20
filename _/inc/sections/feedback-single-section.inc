@@ -26,25 +26,16 @@ $gender = get_field('gender', $feedback_id);
 ?>
 <section id="feedback-section" class="pg-section feedback-single">
 <a name="feedback" id="feedback" class="section-target"></a>
+	
 	<div class="item bg-col-<?php echo (!empty($feedback_color)) ? $feedback_color : 'red'; ?>">
 		
-		<div class="container feedback-quote">
-			<div class="row">
-				<div class="col-xs-2 text-left">
-					<i class="fa fa-quote-left quote-icon"></i>
-				</div>
-				<div class="col-xs-8">
-					<span class="gender-icon fa fa-<?php echo ($gender == 'm') ? 'male':'female'; ?>"></span>
-					<blockquote class="no-border text-center"><?php echo $quote_txt; ?></blockquote>
-					<span class="quote-name"><?php echo $client_name; ?>, <?php echo $location; ?></span>
-				</div>
-				<div class="col-xs-2 text-right">
-					<i class="fa fa-quote-right quote-icon"></i>
-				</div>
-			</div>
+		<div class="container-fluid feedback-quote">
+			<blockquote class="no-border text-center"><?php echo $quote_txt; ?></blockquote>
+			<span class="quote-name"><?php echo $client_name; ?>, <?php echo $location; ?></span>
 		</div>
 		
 		<div class="overlay"></div>
 		
 	</div>
+	
 </section>

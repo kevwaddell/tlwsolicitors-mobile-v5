@@ -1,20 +1,17 @@
 header[role="banner"] {
 .bg-col(white);	
-.abs;
+.trans-bg(@wht; 0.8);
+.fixed;
 .top(0);
 .left(0);
 width: 100%;
 .h(5);
 z-index: 2;
+.drop-shadow(0, 0px, 20px, 0.7);
 //.over-hide;
 
-	&:after {
-	content: "";
-	.abs;
-	width: 100%;
-	.border(@grayDk; 0.2);
-	.left(0);
-	.bottom(-0.2);	
+	@media screen and (orientation: landscape) {
+	.top(-5);	
 	}
 	
 	.logo {
@@ -53,6 +50,10 @@ z-index: 2;
 		.h(5);
 		.pad-all(0);
 		.no-border;
+		.bg-col(@trans);
+			&:active, &:focus {
+			.bg-col(@grayLt);
+			}
 		}
 
 	}

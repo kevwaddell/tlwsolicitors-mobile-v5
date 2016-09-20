@@ -20,7 +20,6 @@ Template Name: General Service page
 	
 	<!-- MAIN CONTENT START -->
 	<main>
-	<?php include (STYLESHEETPATH . '/_/inc/global/breadcrumbs.php'); ?>
 		
 		<!-- BANNER SECTION -->
 		<?php if ($banner_active) { 
@@ -83,6 +82,8 @@ Template Name: General Service page
 			<?php } ?>
 		
 		<?php } ?>
+		
+		<?php include (STYLESHEETPATH . '/_/inc/global/footer-info.inc'); ?>	
 		
 	</main>	
 	<?php endwhile; ?>
