@@ -45,6 +45,8 @@ $img_post = get_the_ID();
 		
 		<?php } ?>
 		
+		<?php include (STYLESHEETPATH . '/_/inc/global/footer-info.inc'); ?>	
+		
 </main>
 		
 <?php endwhile; ?>

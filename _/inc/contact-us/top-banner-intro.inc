@@ -14,12 +14,12 @@ $form_title = get_field('form_section_title');
 			<p class="text-center">You can contact us using any of the following methods.</p>
 		</div>
 		
-		<div class="row contact-info">
-			<div class="col-xs-6"><a href="tel:<?php echo str_replace(" ", "", $freephone_num); ?>" class="contact-info-link"><i class="fa fa-phone"></i>Freephone: <?php echo $freephone_num; ?></a></div>
-			<div class="col-xs-6"><div class="contact-info-label"><i class="fa fa-fax"></i>Fax: <?php echo $fax; ?></div></div>
-			<div class="col-xs-6"><a href="tel:<?php echo str_replace(" ", "", $office_tel); ?>" class="contact-info-link"><i class="fa fa-building-o"></i>Office: <?php echo $office_tel; ?></a></div>
-			<div class="col-xs-6"><a href="mailto:<?php echo $email; ?>" class="contact-info-link"><i class="fa fa-envelope-o"></i><?php echo $email; ?></a></div>
-			<div class="col-xs-12"><a href="#request-a-callback" class="contact-info-link jump-2-link"><i class="fa fa-paper-plane-o"></i><?php echo $form_title; ?></a></div>		
+		<div class="contact-info">
+			<a href="tel:<?php echo str_replace(" ", "", $freephone_num); ?>" class="contact-info-link"><i class="fa fa-phone"></i>Freephone: <?php echo $freephone_num; ?></a>
+			<div class="contact-info-label"><i class="fa fa-fax"></i>Fax: <?php echo $fax; ?></div>
+			<a href="tel:<?php echo str_replace(" ", "", $office_tel); ?>" class="contact-info-link"><i class="fa fa-building-o"></i>Office: <?php echo $office_tel; ?></a>
+			<a href="mailto:<?php echo $email; ?>" class="contact-info-link"><i class="fa fa-envelope-o"></i><?php echo $email; ?></a>
+			<a href="#request-a-callback" class="contact-info-link jump-2-link"><i class="fa fa-paper-plane-o"></i><?php echo $form_title; ?></a>	
 		</div>
 	</div>		
 	<div class="img-overlay"></div>
