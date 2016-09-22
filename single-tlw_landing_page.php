@@ -9,34 +9,34 @@ $color = get_field('page_colour');
 $page_icon = get_field('page_icon');
 $hide_title = get_field('hide_title'); 
 $all_forms_active = get_field('all_forms_active', 'option');
+$post_thumbnail_id = get_post_thumbnail_id( $post->ID );
+$bg_img = wp_get_attachment_image_src($post_thumbnail_id, 'full' );
+$bg_img_url = $bg_img[0];
  ?>			
 <!-- MAIN CONTENT START -->
 	
 <main id="main-content" class="page-wrapper page-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
 	<div class="lp-header bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
-		<div class="container-fluid">
-			<h1 class="text-center"><?php the_title(); ?></h1>
-		</div>
-	</div>	 	
- 	<article <?php post_class(); ?>>
-		<div class="container-fluid">	
-			
-			<div class="row">
-				 	
-			 	<div class="col-md-10 col-md-offset-1">
-						
-				 	<div class="entry entry-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
-						
-						<div class="main-txt">
-						<?php the_content(); ?>
-						</div>
-						
-				 	</div>
-				 
-			 	</div>
+		<h1 class="text-center"><?php the_title(); ?></h1>
+	</div>	
+	
+	<div class="lp-bg-img" style="background-image: url(<?php echo $bg_img_url; ?>)">
+		<div class="col-overlay"></div>
+		<div class="striped-overlay"></div>
+	</div>
 		
+ 	<article <?php post_class(); ?>>
+
+	 	<div class="entry entry-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
+			
+			<div class="main-txt">
+			<?php the_content(); ?>
 			</div>
-								 	
+			
+	 	</div>
+				 
+		<div class="container-fluid">
+									 	
 			<?php include (STYLESHEETPATH . '/_/inc/sections/sidebar-landing-page.inc'); ?>
 			
 		</div>
