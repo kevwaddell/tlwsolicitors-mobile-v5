@@ -7911,6 +7911,9 @@ body#landing-page .lp-form select.large {
 body#landing-page .lp-form .bootstrap-select {
   width: 100%;
 }
+body#landing-page .lp-form .bootstrap-select .btn {
+  height: 34px;
+}
 body#landing-page .lp-form .bootstrap-select a {
   color: #4b4b4b;
 }
@@ -7937,8 +7940,8 @@ body#landing-page .lp-form .gform_footer:after {
   right: 20px;
   top: 0px;
   color: white;
-  font-size: 20px;
-  line-height: 60px;
+  font-size: 14px;
+  line-height: 30px;
 }
 body#landing-page .lp-form .gform_footer input.gform_button {
   text-transform: uppercase;
