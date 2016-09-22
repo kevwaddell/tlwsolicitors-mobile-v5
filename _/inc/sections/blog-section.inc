@@ -47,17 +47,22 @@ $archives = wp_get_archives($archives_args);
 			$day = get_the_date('j', $ID);
 			$yr = get_the_date('Y', $ID);
 			?>
-			<div class="item<?php echo ($k === 0) ? " active":""; ?>">
-				<div class="recent-post">
-					<time class="article-date" datetime="<?php get_the_date( 'Y-m-d',  $ID); ?>">
-						<span class="mth"><?php echo $mth; ?></span>
-						<span class="day"><?php echo $day; ?></span>
-						<span class="yr"><?php echo $yr; ?></span>
-					</time>
-					<h3><a href="<?php echo get_permalink($ID); ?>"><?php echo get_the_title($ID); ?></a></h3>
-					<a href="<?php echo get_permalink($ID); ?>" class="view-post-btn"><span class="sr-only">View Article</span></a>
+			
+				<div class="item<?php echo ($k === 0) ? " active":""; ?>">
+					
+					<div class="container-fluid">
+					<div class="recent-post">
+						<time class="article-date" datetime="<?php get_the_date( 'Y-m-d',  $ID); ?>">
+							<span class="mth"><?php echo $mth; ?></span>
+							<span class="day"><?php echo $day; ?></span>
+							<span class="yr"><?php echo $yr; ?></span>
+						</time>
+						<h3><a href="<?php echo get_permalink($ID); ?>"><?php echo get_the_title($ID); ?></a></h3>
+						<a href="<?php echo get_permalink($ID); ?>" class="view-post-btn"><span class="sr-only">View Article</span></a>
+					</div>
+					</div>
+					
 				</div>
-			</div>
 			<?php } ?>
 		</div>
 	</div>

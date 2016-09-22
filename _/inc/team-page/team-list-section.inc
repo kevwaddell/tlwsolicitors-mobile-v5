@@ -4,14 +4,11 @@ $profiles_total = count($profiles);
 //echo '<pre class="debug">';print_r($profiles);echo '</pre>';
 ?>
 <section id="our-team-section" class="pg-section bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
-	<a name="our-team" id="our-team" class="section-target"></a>
 	<div class="overlay"></div>
-	<div class="container-fluid">
-		<h2 class="text-center section-header bg-col-grayDk"><?php echo $section_title; ?></h2>
-	</div>
+	<h2 class="text-center section-header bg-col-grayDk"><?php echo $section_title; ?></h2>
 	
 	<div class="our-team-wrapper">
-		<div id="our-team-wrapper-inner" class="wrapper-inner" style="left: 0px; width: <?php echo (300 * $profiles_total) + 30; ?>px">
+		<div id="our-team-wrapper-inner" class="wrapper-inner" style="left: 0px; width: <?php echo (190 * $profiles_total) + 10; ?>px">
 			<?php foreach ($profiles as $post) : ?>
 			<?php
 			setup_postdata($post);	 

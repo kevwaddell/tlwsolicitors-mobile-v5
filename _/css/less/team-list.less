@@ -1,27 +1,34 @@
 #our-team-section {
 .bg-col-gray;
 .gradient(@gray, @gray ,@grayDk);
+.pad-bot(0);
 
 	.our-team-wrapper {
 	overflow-x: scroll;	
-	.h(40);	
+	.h(26);	
 	.rel;
 	}
 	
+	.section-header {
+	.mag-bot(0);	
+	}
+	
 	.wrapper-inner {
-	.h(40);	
+	.h(26);	
 	.abs;
 	.top(0);
-	.pad-left(3);
+	.pad-left(1);
+	.pad-top(1.5);
+	.pad-bot(1.5);
 	}
 	
 	.team-profile {
 	.fleft;
-	.w(30);
-	.h(35);	
+	.w(19);
+	.h(23);	
 		.profile-inner {
 		height: 100%;	
-		.mag-right(3);
+		.mag-right(1);
 		.drop-shadow(0, 3px, 10px, 0.7);
 		.rel;
 		overflow: hidden;
@@ -48,16 +55,21 @@
 		.bottom(0.4);	
 		.trans-bg(@wht; 0.8);
 		width: 100%;
-		.pad-all(1);
+		.pad-all(0.5);
 		text-align: center;
 			h3 {
 			.mag-top(0);
 			.mag-bot(0.3);
-			.font-slab-serif;	
+			.font-slab-serif;
+			.font-size(1.2);	
+			.line-h(1.2);
 			}
 			.email a {
+			.block;
 			.txt-col-red;	
 			.no-text-dec;
+			.font-size(1);
+			.line-h(1);
 				&:hover, &:active, &:focus {
 				.txt-col-red-dk;
 				}
@@ -73,12 +85,14 @@
 		height: 100%;
 		.trans-bg(@grayDk; 0.9);
 		.txt-col-wht;
-		.pad-all(2);
+		.pad-all(1);
 		.transition(0.3s, ease-out);
+		.font-size(1.2);
+		.line-h(1.4);
 			
 			.position {
-			.font-size(1.4);	
-			.line-h(1.4);
+			.font-size(1);	
+			.line-h(1);
 			.bold;
 			.mag-bot(0.7);
 				span {
@@ -87,6 +101,11 @@
 				.txt-col-green;	
 				.font-normal;
 				}
+			}
+			
+			p {
+			.font-size(1);
+			.line-h(1.2);	
 			}
 			
 				.profile-info-btn {
@@ -103,7 +122,7 @@
 					font-family: FontAwesome;	
 					}
 					
-					&:hover, &:active, &:focus {
+					&:active, &:focus {
 						.txt-col-gray;
 						.opacity(0.8);
 					}
@@ -114,7 +133,7 @@
 			.mag-left(27);				
 				.profile-info-btn {
 				.left(-27);
-				height: calc(~'100% - 75px');
+				height: calc(~'100% - 37px');
 				}	
 			}
 			&.txt-view {
@@ -135,7 +154,7 @@
 					content: "\f138";	
 					}
 				
-					&:hover, &:active, &:focus {
+					&:active, &:focus {
 					.bg-col(@wht);
 					.opacity(0.8);
 					.txt-col-red;
