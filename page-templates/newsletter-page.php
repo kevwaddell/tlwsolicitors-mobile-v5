@@ -13,8 +13,6 @@ Template Name: Newsletter sign up template
 			$color = get_field('page_colour');
 			 ?>	
 			 <main class="page-col-red">
-				 	
-				<?php include (STYLESHEETPATH . '/_/inc/global/breadcrumbs.php'); ?>
 				
 				<?php if (has_post_thumbnail()) { ?>
 				<?php include (STYLESHEETPATH . '/_/inc/banners/img-banner-slim.inc'); ?>			
@@ -44,7 +42,8 @@ Template Name: Newsletter sign up template
 				
 				<?php } ?>
 
-			 
+				<?php include (STYLESHEETPATH . '/_/inc/global/footer-info.inc'); ?>	
+				
 			 </main>
 			<?php endwhile; ?>
 			<?php endif; ?>

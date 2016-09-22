@@ -19,8 +19,6 @@ $img_post = get_the_ID();
  ?>	
 
 <main <?php post_class('page-col-red'); ?>>
-	
-	<?php include (STYLESHEETPATH . '/_/inc/global/breadcrumbs.php'); ?>
 		
 	<?php include (STYLESHEETPATH . '/_/inc/contact-us/top-banner-intro.inc'); ?>		
 	

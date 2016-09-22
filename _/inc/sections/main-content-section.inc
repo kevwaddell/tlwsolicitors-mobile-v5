@@ -53,9 +53,9 @@ $more_btn_text = "Continue Reading";
 						
 		<?php if (!empty($children)) { ?>
 		<div class="rule"></div>
-		<nav class="child-page-links text-center">
+		<nav class="child-page-links">
 			<?php foreach ($children as $child) { ?>
-				<a href="<?php echo get_permalink($child->ID); ?>" class="btn btn-default no-border no-rounded"><?php echo get_the_title($child->ID); ?></a>
+				<a href="<?php echo get_permalink($child->ID); ?>" class="btn btn-default btn-block no-border no-rounded"><?php echo get_the_title($child->ID); ?></a>
 			<?php } ?>
 		</nav>		
 		<?php } ?>

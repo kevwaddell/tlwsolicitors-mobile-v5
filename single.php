@@ -11,7 +11,6 @@
 			<!-- MAIN CONTENT START -->
 			
 			<main class="page-col-red">
-				<?php include (STYLESHEETPATH . '/_/inc/global/breadcrumbs.php'); ?>
 				
 				<?php if (has_post_thumbnail()) { ?>
 				<?php include (STYLESHEETPATH . '/_/inc/banners/blog/img-banner-single-pg.inc'); ?>		
@@ -26,6 +25,8 @@
 				<?php if ($related_posts_active) { ?>
 				<?php include (STYLESHEETPATH . '/_/inc/posts/sections/related-posts-section.inc'); ?>
 				<?php } ?>
+				
+				<?php include (STYLESHEETPATH . '/_/inc/global/footer-info.inc'); ?>	
 				
 			</main>
 			

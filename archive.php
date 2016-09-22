@@ -13,8 +13,6 @@ $page_icon = get_field('page_icon', $news_page->ID);
 <!-- MAIN CONTENT START -->
 <main class="page-col-red">
 	
-	<?php include (STYLESHEETPATH . '/_/inc/global/breadcrumbs.php'); ?>
-	
 	<?php if ($img_post) { ?>
 	<?php include (STYLESHEETPATH . '/_/inc/banners/blog/img-banner-index-pg.inc'); ?>		
 	<?php } ?>
@@ -31,7 +29,8 @@ $page_icon = get_field('page_icon', $news_page->ID);
 	
 	<!-- SOCIAL FEED -->
 	<?php include (STYLESHEETPATH . '/_/inc/posts/social-feed-slider.inc'); ?>
-
+	
+	<?php include (STYLESHEETPATH . '/_/inc/global/footer-info.inc'); ?>	
 </main>
 <!-- MAIN CONTENT CONTAINER END -->
 

@@ -77,7 +77,9 @@
 				<?php endif; ?>
 
 			</section>
-	
+			
+			<?php include (STYLESHEETPATH . '/_/inc/global/footer-info.inc'); ?>	
+			
 	</main>
 
 <?php get_footer(); ?>

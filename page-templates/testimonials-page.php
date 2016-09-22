@@ -79,6 +79,8 @@ Template Name: Why Choose TLW page template
 		
 		<?php } ?>
 		
+		<?php include (STYLESHEETPATH . '/_/inc/global/footer-info.inc'); ?>	
+		
 	</main>	
 	<?php endwhile; ?>
 	<?php endif; ?>

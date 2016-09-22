@@ -11,7 +11,7 @@ $archives = wp_get_archives($archives_args);
 //echo '<pre>';print_r($archives);echo '</pre>';
 ?>
 <?php if ($archives) { ?>
-<div class="cats-dropdown">
+<div class="archive-dropdown">
 	
 	<select id="archive-dd" class="selectpicker" data-width="100%">
 		<option value="0" data-hidden="true">Blog Archives</option>

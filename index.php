@@ -14,8 +14,6 @@
 	
 		<main class="page-col-red">
 			
-			<?php include (STYLESHEETPATH . '/_/inc/global/breadcrumbs.php'); ?>
-			
 			<?php if ($img_post) { ?>
 			<?php include (STYLESHEETPATH . '/_/inc/banners/blog/img-banner-index-pg.inc'); ?>		
 			<?php } ?>
@@ -32,7 +30,9 @@
 			
 			<!-- SOCIAL FEED -->
 			<?php include (STYLESHEETPATH . '/_/inc/posts/social-feed-slider.inc'); ?>		
-
+			
+			<?php include (STYLESHEETPATH . '/_/inc/global/footer-info.inc'); ?>	
+			
 		</main><!-- CONTENT END -->
 
 <?php get_footer(); ?>

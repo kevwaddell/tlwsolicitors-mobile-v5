@@ -2,27 +2,30 @@
 text-align: center;
 		
 	input.form-control {
-	.rounded(8px);
+	.rounded(4px);
 	.border-col(@gray);	
 	margin-left: auto;
 	margin-right: auto;
 	.mag-bot(1);
 	text-align: center;
-	.max-w(50);
-	.h(5);
+	.h(4);
 	}
 	
 	.search-submit {
-	.rounded(8px);
+	.rounded(4px);
 	.mag-auto;
 	width: 100%;
 	.no-border;
 	.bg-col(@grayDk);
 	.col(white);
-	.h(5);	
-	.w(50);
+	.h(4);	
+	//.w(50);
 	.pad-all(0);
+	.pad-left(1);
 	.mag-all(0);
+	text-align: left;
+	.font-slab-serif;
+	.caps;
 	
 		&:hover, &:active, &:focus {
 		.bg-col(@gray);	
@@ -30,27 +33,27 @@ text-align: center;
 	}
 	
 	.search-btn-wrap {
-	.w(50);
+	//.w(50);
 	.mag-auto;
 	.rel;
 		.btn-pointer {
 		.abs;
-		.right(2);
+		.right(1);
 		.top(0);
-		.line-h(5);
+		.line-h(4);
 		.col(white);	
 		}
 	}	
 }
 
 #site-map-lists {
-.pad-top(4);
+.pad-top(2);
 	h3 {
-	.h(4);
-	.line-h(4);
+	.h(3);
+	.line-h(3);
 	.bg-col(@red);
 	.col(white);
-	.font-size(2);
+	.font-size(1.6);
 	
 		a {
 		.block;
@@ -63,9 +66,9 @@ text-align: center;
 		}	
 		
 		i {
-		.h(4);
-		.w(4);
-		.line-h(4);	
+		.h(3);
+		.w(3);
+		.line-h(3);	
 		.fright;
 		text-align: center;
 		

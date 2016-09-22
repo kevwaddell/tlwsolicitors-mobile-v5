@@ -6,9 +6,7 @@
 		$post_counter = 0;
 		?>
 		<div class="page-links">
-			<div class="container-fluid">	
-			<?php wp_pagenavi(); ?>
-			</div>
+		 	<?php wp_pagenavi(); ?>
 		</div>	
 		<?php while ( have_posts() ) : the_post();
 		$date = get_the_date('l - jS F - Y');
@@ -16,24 +14,21 @@
 			<article <?php post_class("col-".$cols[$post_counter]); ?> style="background-image: url(<?php add_full_page_banner_img(get_the_id());?>)">
 			<div class="overlay"></div>
 			<div class="stripes-overlay"></div>
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-md-10 col-md-offset-1">
-							<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php echo $date; ?></time>
-							<h4><a href="<?php esc_url( the_permalink() ); ?>" title="View: <?php the_title_attribute(); ?> article" rel="bookmark"><?php the_title(); ?></a></h4>
-							<?php the_excerpt(); ?>
-							<a href="<?php esc_url( the_permalink() ); ?>" class="btn btn-default" title="View: <?php the_title_attribute(); ?> article" rel="bookmark">View article</a>
-						</div>
+				
+					<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php echo $date; ?></time>
+					<div class="container-fluid">
+						<h4><a href="<?php esc_url( the_permalink() ); ?>" title="View: <?php the_title_attribute(); ?> article" rel="bookmark"><?php the_title(); ?></a></h4>
+					
+						<?php the_excerpt(); ?>
 					</div>
-				</div>
+					<a href="<?php esc_url( the_permalink() ); ?>" class="btn btn-default" title="View: <?php the_title_attribute(); ?> article" rel="bookmark">View article</a>
+
 			</article>
 		<?php $post_counter++; ?>
 		<?php endwhile; ?>
 		
 		<div class="page-links">
-			<div class="container-fluid">	
 			<?php wp_pagenavi(); ?>
-			</div>
 		</div>					
 					
 		

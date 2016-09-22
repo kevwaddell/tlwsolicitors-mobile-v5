@@ -9,7 +9,6 @@ Template Name: Thank page template
 
 		<?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
 		<main>	
-		<?php include (STYLESHEETPATH . '/_/inc/global/breadcrumbs.php'); ?>
 		
 		<?php include (STYLESHEETPATH . '/_/inc/banners/img-banner-thankyou.inc'); ?>
 		
@@ -44,7 +43,8 @@ Template Name: Thank page template
 				
 			</article>
 				
-		
+			<?php include (STYLESHEETPATH . '/_/inc/global/footer-info.inc'); ?>	
+			
 		</main>		
 		<?php endwhile; ?>
 		<?php endif; ?>
