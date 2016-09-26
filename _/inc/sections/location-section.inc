@@ -69,7 +69,6 @@ google.maps.event.addDomListener(window, 'load', wide_map_init);
 
 	<div class="location-box">
 		<address>
-			<span class="company bold caps col-red font-size-25"><?php bloginfo('name'); ?></span><br>
 			<?php echo $address; ?>
 		</address>
 		
