@@ -17,17 +17,15 @@ $section_title = "Toolkit";
 			<?php echo $txt['slide_title']; ?>
 		</h2>
 		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-10 col-md-offset-1">
-					<div class="tk-img">
-						<figure class="tk-slide-img" style="background-image: url(<?php echo $txt['slide_img']; ?>)"></figure>
-						<div class="overlay"></div>
-					</div>
-					<div class="txt">
-					<?php echo $txt['slide_text']; ?>
-					</div>
-				</div>
+			
+			<div class="tk-img">
+				<figure class="tk-slide-img" style="background-image: url(<?php echo $txt['slide_img']; ?>)"></figure>
+				<div class="overlay"></div>
 			</div>
+			<div class="txt">
+			<?php echo $txt['slide_text']; ?>
+			</div>
+				
 		</div>
 	</article>
 

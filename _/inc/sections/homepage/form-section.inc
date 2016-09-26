@@ -15,11 +15,7 @@ $section_title = $form->title;
 <section id="<?php echo $section['acf_fc_layout']; ?>" class="pg-section with-header">
 	<h2 class="text-center section-header bg-col-grayDk"><?php echo $section_title; ?></h2>
 	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-10 col-md-offset-1">
-				<?php gravity_form($form->id, false, true, false, null, true); ?>
-			</div>
-		</div>
+		<?php gravity_form($form->id, false, true, false, null, true); ?>
 	</div>
 </section>
 <?php } ?>

@@ -36,9 +36,8 @@ $archives = wp_get_archives($archives_args);
 			?>
 			<div class="item<?php echo ($k === 0) ? " active":""; ?>">
 				<div class="container-fluid">
-					<div class="row">
-						<div class="col-md-10 col-md-offset-1">
-							<div class="recent-post">
+					
+					<div class="recent-post">
 						<time class="article-date" datetime="<?php get_the_date( 'Y-m-d',  $ID); ?>">
 							<span class="mth"><?php echo $mth; ?></span>
 							<span class="day"><?php echo $day; ?></span>
@@ -47,8 +46,7 @@ $archives = wp_get_archives($archives_args);
 						<h3><a href="<?php echo get_permalink($ID); ?>"><?php echo get_the_title($ID); ?></a></h3>
 						<a href="<?php echo get_permalink($ID); ?>" class="view-post-btn"><span class="sr-only">View Article</span></a>
 					</div>
-						</div>
-					</div>
+						
 				</div>
 			</div>
 			<?php } ?>
