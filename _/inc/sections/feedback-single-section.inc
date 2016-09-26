@@ -20,6 +20,10 @@ $feedback_color = $color;
 $quote_txt = get_field('quote', $feedback_id);	
 $client_name = get_field('client_name', $feedback_id);		
 $location = get_field('location', $feedback_id);	
+$company = get_field('company', $feedback_id);
+if (!empty($company)) {
+$location = '<br />'.$company.', '.$location;	
+}
 $gender = get_field('gender', $feedback_id);
 
 //echo '<pre class="debug">';print_r($gender);echo '</pre>';
