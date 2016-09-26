@@ -7,14 +7,11 @@ $section_title = $form->title;
 }
 ?>
 <section id="form-section" class="pg-section with-header with-icon-logo bg-col-red">
-<a name="request-a-callback" id="request-a-callback" class="section-target"></a>
+	<h2 class="text-center section-header bg-col-grayDk"><?php echo $section_title; ?></h2>
+	
 	<div class="container-fluid">
-		<h2 class="text-center section-header bg-col-grayDk"><?php echo $section_title; ?></h2>
-		<div class="row">
-			<div class="col-md-10 col-md-offset-1">
 		<?php gravity_form($form->id, false, true, false, null, true); ?>
-			</div>
-		</div>
 	</div>
+	
 	<div class="overlay"></div>
 </section>

@@ -10,11 +10,13 @@
 	<main class="page-col-red">
 	 
 			<article class="page">
-				<h1 class="text-center" style="margin-top: 20px;">Search Results</h1>
-				<p class="intro text-center">You Searched for: "<?php the_search_query(); ?>"<br> Results: <?php echo $search_count; ?></p>
-				
-				<div class="search-form-wrap">
-				<?php get_search_form(); ?>
+				<div class="container-fluid">
+					<h1 class="text-center" style="margin-top: 20px;">Search Results</h1>
+					<p class="intro text-center">You Searched for: "<?php the_search_query(); ?>"<br> Results: <?php echo $search_count; ?></p>
+					
+					<div class="search-form-wrap">
+					<?php get_search_form(); ?>
+					</div>
 				</div>
 			</article>
 			
@@ -54,24 +56,14 @@
 				</div><!-- End List -->
 				
 				<div class="page-links" style="margin-bottom: 40px;">
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-md-10 col-md-offset-1">
-								<?php wp_pagenavi(); ?>
-							</div>
-						</div>
-					</div>
+					<?php wp_pagenavi(); ?>
 				</div>		
 				
 				<?php else: ?>
 				<div class="container-fluid">	
-					<div class="row">
-						<div class="col-xs-8 col-xs-offset-2">
-						<div class="well well-lg posts-message">
-							<h3 class="text-center">Sorry</h3>
-							<p class="text-center">There are no search results for "<?php echo $search_query; ?>". Please try again.</p>
-						</div>
-						</div>
+					<div class="well posts-message">
+						<h3 class="text-center">Sorry</h3>
+						<p class="text-center">There are no search results for "<?php echo $search_query; ?>". Please try again.</p>
 					</div>
 				</div>
 				<?php endif; ?>

@@ -1,6 +1,18 @@
 (function($){
 	var tagInterval;
 	var event_type = 'touchstart';
+	
+	var gformSubmitted = false;
+ 
+	$(".gform_wrapper form").submit(function(event) {
+	    if (gformSubmitted) {
+	        event.preventDefault();
+	    }
+	    else {
+	        gformSubmitted = true;
+	        $("input[type='submit']", this).val("Processing, please wait...");
+	    }
+	});
 	  
 	$(document).ready(function (){
 	
