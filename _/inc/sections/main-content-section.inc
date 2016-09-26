@@ -19,9 +19,7 @@ $more_btn_text = "Continue Reading";
 	<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.inc'); ?>	
 	
 	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-10 col-md-offset-1">
-				
+
 		<?php if ($post->post_parent != 0 ) { ?>
 		<div class="service-label text-center font-slab-serif caps txt-col-wht <?php echo (!empty($color)) ? 'bg-col-'.$color.'-dk' : 'bg-col-red-dk'; ?>">
 			<i class="fa fa-info-circle <?php echo (!empty($color)) ? 'bg-col-'.$color.' txt-col-'.$color.'-dk' : 'bg-col-red txt-col-red-dk'; ?>"></i><?php the_title(); ?>
@@ -59,10 +57,7 @@ $more_btn_text = "Continue Reading";
 			<?php } ?>
 		</nav>		
 		<?php } ?>
-		
-	
-			</div>
-		</div>
+
 	</div>
 	
 </article>

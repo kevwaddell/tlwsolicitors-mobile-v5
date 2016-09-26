@@ -21,9 +21,6 @@ $section_title = "Article text";
 	
 	<div class="container-fluid">
 
-			
-		<div class="row">
-			<div class="col-md-10 col-md-offset-1">		
 		<time class="date" datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><i class="fa fa-calendar fa-lg"></i> <?php echo $date; ?></time>	
 			<div class="entry wide-entry">
 				
@@ -51,9 +48,8 @@ $section_title = "Article text";
 				<?php if (!empty($post_content['extended'])) { ?>
 				<button id="continue-read-btn" class="btn btn-default btn-block"><?php echo $more_btn_text; ?><i class="fa fa-plus-circle"></i></button>
 				<?php } ?>
-			</div>
 			
-		</div>
+
 	</div>
 	
 </article>
