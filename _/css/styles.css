@@ -6607,19 +6607,19 @@ section.social-feed span.date {
 }
 #our-team-section .our-team-wrapper {
   overflow-x: scroll;
-  height: 260px;
+  height: 290px;
   position: relative;
 }
 #our-team-section .section-header {
   margin-bottom: 0px;
 }
 #our-team-section .wrapper-inner {
-  height: 260px;
+  height: 290px;
   position: absolute;
   top: 0px;
   padding-left: 10px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 #our-team-section .team-profile {
   float: left;
