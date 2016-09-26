@@ -9489,85 +9489,102 @@ article.content-section #content-extra #close-content-extra-btn:focus i {
 }
 .pg-section#downloads-section {
   border-top: 2px solid white;
+  padding-bottom: 0px;
+}
+.pg-section#downloads-section h2.section-header {
+  margin-bottom: 0px;
+  border: none;
 }
 .pg-section#downloads-section .download-items {
-  margin-bottom: 20px;
   position: relative;
   z-index: 1;
 }
 .pg-section#downloads-section .download-item {
   text-align: center;
+  border-top: 2px solid white;
+}
+.pg-section#downloads-section .download-item span {
+  height: 80px;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 10px;
+}
+.pg-section#downloads-section .download-item span.img {
+  width: 30%;
+  padding: 5px;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.pg-section#downloads-section .download-item span.title {
+  width: 70%;
 }
 .pg-section#downloads-section .download-item img {
-  margin-bottom: 20px;
-  height: 200px;
   width: auto;
   background-color: white;
-  padding: 4px;
   position: relative;
-}
-.pg-section#downloads-section .download-item a,
-.pg-section#downloads-section .download-item span,
-.pg-section#downloads-section .download-item img {
-  display: inline-block;
 }
 .pg-section#downloads-section .download-item a {
   color: white;
   position: relative;
   text-decoration: none;
   overflow: hidden;
+  display: table;
+  height: 80px;
+  width: 100%;
 }
-.pg-section#downloads-section .download-item a span {
-  display: block;
+.pg-section#downloads-section .download-item a span.title {
   text-transform: uppercase;
   font-family: "aleoreg", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-stretch: normal;
-  font-size: 16px;
-  line-height: 16px;
-  height: 32px;
+  font-size: 14px;
+  line-height: 14px;
 }
 .pg-section#downloads-section .download-item a:hover,
 .pg-section#downloads-section .download-item a:active,
 .pg-section#downloads-section .download-item a:focus {
   font-weight: bold;
 }
-.pg-section#downloads-section .download-item a:hover img,
-.pg-section#downloads-section .download-item a:active img,
-.pg-section#downloads-section .download-item a:focus img {
-  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
-  -moz-opacity: 0.7;
-  -khtml-opacity: 0.7;
-  -webkit-opacity: 0.7;
-  opacity: 0.7;
-  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
-  filter: alpha(opacity=70);
+.pg-section#downloads-section.bg-col-purple a:active span.title,
+.pg-section#downloads-section.bg-col-purple a:focus span.title {
+  color: #6C4480;
 }
-.pg-section#downloads-section.bg-col-purple a:hover img,
-.pg-section#downloads-section.bg-col-purple a:active img,
-.pg-section#downloads-section.bg-col-purple a:focus img {
+.pg-section#downloads-section.bg-col-purple a:active span.img,
+.pg-section#downloads-section.bg-col-purple a:focus span.img {
   background-color: #6C4480;
 }
-.pg-section#downloads-section.bg-col-green a:hover img,
-.pg-section#downloads-section.bg-col-green a:active img,
-.pg-section#downloads-section.bg-col-green a:focus img {
+.pg-section#downloads-section.bg-col-green a:active span.title,
+.pg-section#downloads-section.bg-col-green a:focus span.title {
+  color: #698037;
+}
+.pg-section#downloads-section.bg-col-green a:active span.img,
+.pg-section#downloads-section.bg-col-green a:focus span.img {
   background-color: #698037;
 }
-.pg-section#downloads-section.bg-col-pink a:hover img,
-.pg-section#downloads-section.bg-col-pink a:active img,
-.pg-section#downloads-section.bg-col-pink a:focus img {
+.pg-section#downloads-section.bg-col-pink a:active span.title,
+.pg-section#downloads-section.bg-col-pink a:focus span.title {
+  color: #B8445D;
+}
+.pg-section#downloads-section.bg-col-pink a:active span.img,
+.pg-section#downloads-section.bg-col-pink a:focus span.img {
   background-color: #B8445D;
 }
-.pg-section#downloads-section.bg-col-orange a:hover img,
-.pg-section#downloads-section.bg-col-orange a:active img,
-.pg-section#downloads-section.bg-col-orange a:focus img {
+.pg-section#downloads-section.bg-col-orange a:active span.title,
+.pg-section#downloads-section.bg-col-orange a:focus span.title {
+  color: #AA7A39;
+}
+.pg-section#downloads-section.bg-col-orange a:active span.img,
+.pg-section#downloads-section.bg-col-orange a:focus span.img {
   background-color: #AA7A39;
 }
-.pg-section#downloads-section.bg-col-blue a:hover img,
-.pg-section#downloads-section.bg-col-blue a:active img,
-.pg-section#downloads-section.bg-col-blue a:focus img {
+.pg-section#downloads-section.bg-col-blue a:hover span.title,
+.pg-section#downloads-section.bg-col-blue a:active span.title,
+.pg-section#downloads-section.bg-col-blue a:focus span.title {
+  color: #184358;
+}
+.pg-section#downloads-section.bg-col-blue a:hover span.img,
+.pg-section#downloads-section.bg-col-blue a:active span.img,
+.pg-section#downloads-section.bg-col-blue a:focus span.img {
   background-color: #184358;
 }
 .pg-section#form-section {
@@ -10149,8 +10166,8 @@ article.content-section #content-extra #close-content-extra-btn:focus i {
   position: absolute;
   top: 0px;
   left: 0px;
+  bottom: 0px;
   width: 50px;
-  min-height: 85px;
   padding-top: 20px;
   background-color: #C60751;
   text-align: center;
@@ -10170,8 +10187,8 @@ article.content-section #content-extra #close-content-extra-btn:focus i {
   line-height: 20px;
 }
 .pg-section#blog-posts .recent-post h3 {
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 16px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", 'open_sanslight', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   font-stretch: normal;
@@ -10187,7 +10204,7 @@ article.content-section #content-extra #close-content-extra-btn:focus i {
   right: 0px;
   top: 0px;
   width: 50px;
-  min-height: 85px;
+  bottom: 0px;
   display: block;
   color: white;
   background-color: #4b4b4b;
