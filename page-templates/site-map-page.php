@@ -10,6 +10,8 @@ Template Name: Sitemap page
 
 <!-- MAIN CONTENT START -->
 <main>
+	
+	<?php include (STYLESHEETPATH . '/_/inc/global/awards-strip.inc'); ?>	
 		
 	<article <?php post_class("content-section"); ?>>
 		<div class="container-fluid">

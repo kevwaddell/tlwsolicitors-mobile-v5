@@ -19,6 +19,8 @@ $img_post = get_the_ID();
  ?>	
 
 <main <?php post_class('page-col-red'); ?>>
+	
+	<?php include (STYLESHEETPATH . '/_/inc/global/awards-strip.inc'); ?>	
 		
 	<?php include (STYLESHEETPATH . '/_/inc/contact-us/top-banner-intro.inc'); ?>		
 	

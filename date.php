@@ -14,6 +14,8 @@ $page_icon = get_field('page_icon', $news_page->ID);
 
 <main class="page-col-red">
 	
+	<?php include (STYLESHEETPATH . '/_/inc/global/awards-strip.inc'); ?>	
+	
 	<?php if ($img_post) { ?>
 	<?php include (STYLESHEETPATH . '/_/inc/banners/blog/img-banner-index-pg.inc'); ?>		
 	<?php } ?>

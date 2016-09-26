@@ -11422,7 +11422,7 @@ body.logged-in #xmas-popup-btn-wrap .holly.left {
 /* Awards pop-uop styles */
 /* --------------------------- */
 #awards-pop-up {
-  height: 104px;
+  height: 62px;
   background-color: #036937;
   overflow: hidden;
   -webkit-transition: all 0.3s ease-out;
@@ -11435,13 +11435,13 @@ body.logged-in #xmas-popup-btn-wrap .holly.left {
   box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.5);
 }
 #awards-pop-up.open {
-  height: 104px;
+  height: 62px;
 }
 #awards-pop-up.closed {
   height: 0px;
 }
 #awards-pop-up #awards-pop-up-inner {
-  height: 104px;
+  height: 62px;
   border-bottom: 2px solid white;
   color: white;
 }
@@ -11453,7 +11453,7 @@ body.logged-in #xmas-popup-btn-wrap .holly.left {
 #awards-pop-up #awards-pop-up-inner .inner-right {
   float: right;
   background-image: url(img/law-awards-text-right-2016.png);
-  background-position: left center;
+  background-position: 5px center;
   background-repeat: no-repeat;
   -webkit-background-size: 90%;
   -moz-background-size: 90%;
@@ -11470,27 +11470,35 @@ body.logged-in #xmas-popup-btn-wrap .holly.left {
 }
 #awards-pop-up #awards-pop-up-inner .inner-left {
   float: left;
-  padding-right: 10px;
+  padding-right: 5px;
   background-color: white;
 }
 #awards-pop-up #awards-pop-up-inner #nla-logo {
-  float: right;
   height: 100%;
-  width: 300px;
+  width: 100%;
   background-image: url(img/northern-Law-Awards-logo.png);
   background-repeat: no-repeat;
   background-position: right center;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  background-size: contain;
+  -webkit-background-size: 90%;
+  -moz-background-size: 90%;
+  -o-background-size: 90%;
+  background-size: 90%;
+}
+@media screen and (orientation: landscape) {
+  #awards-pop-up #awards-pop-up-inner #nla-logo {
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+  }
 }
 #awards-pop-up button#close-awards-btn {
   position: absolute;
-  right: 10px;
-  top: 10px;
-  width: 30px;
-  height: 30px;
+  font-size: 12px;
+  right: 5px;
+  top: 5px;
+  width: 20px;
+  height: 20px;
   padding: 0px;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;

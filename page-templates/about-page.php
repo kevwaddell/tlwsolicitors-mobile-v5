@@ -21,6 +21,8 @@ Template Name: About page template
 	<!-- MAIN CONTENT START -->
 	<main>
 		
+		<?php include (STYLESHEETPATH . '/_/inc/global/awards-strip.inc'); ?>	
+		
 		<!-- BANNER SECTION -->
 		<?php if ($banner_active) { 
 		$banner_type = get_field('banner_type');
