@@ -8249,7 +8249,7 @@ body#landing-page .lp-form .gform_page_footer input.gform_button {
   position: relative;
   height: 120px;
   width: 70%;
-  margin-bottom: 10px;
+  margin: 0px auto 10px;
 }
 @media screen and (orientation: landscape) {
   .toolkit-txt-section .tk-txt .tk-img {
