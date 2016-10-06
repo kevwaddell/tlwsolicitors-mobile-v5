@@ -6463,7 +6463,7 @@ article.post .main-txt a:focus {
 article.page .main-txt ul,
 article.post .main-txt ul {
   list-style: none;
-  padding-left: 20px;
+  padding-left: 0px;
   margin-bottom: 20px;
 }
 article.page .main-txt ul li,
@@ -6483,8 +6483,8 @@ article.post .main-txt ul li:before {
 article.page .main-txt ol,
 article.post .main-txt ol {
   list-style: none;
-  padding-left: 10px;
-  margin-bottom: 10px;
+  padding-left: 0px;
+  margin-bottom: 20px;
   list-style-position: inside;
   counter-reset: item;
 }
@@ -9589,6 +9589,12 @@ article.content-section #content-extra #close-content-extra-btn:focus i {
 }
 .pg-section#form-section {
   border-top: 2px solid white;
+  background: white;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, white), color-stop(1, #E9E9E9));
+  background: -ms-linear-gradient(bottom, white, #E9E9E9);
+  background: -moz-linear-gradient(center bottom, white 0%, #E9E9E9 100%);
+  background: -o-linear-gradient(#E9E9E9, white);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E9E9E9', endColorstr='white', GradientType=0);
 }
 .pg-section#form-section .container-fluid {
   position: relative;

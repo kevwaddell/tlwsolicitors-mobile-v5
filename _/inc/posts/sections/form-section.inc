@@ -6,7 +6,7 @@ if (empty($section_title)) {
 $section_title = $form->title;
 }
 ?>
-<section id="form-section" class="pg-section with-header with-icon-logo bg-col-red">
+<section id="form-section" class="pg-section with-header with-icon-logo">
 	<h2 class="text-center section-header bg-col-grayDk"><?php echo $section_title; ?></h2>
 	
 	<div class="container-fluid">
