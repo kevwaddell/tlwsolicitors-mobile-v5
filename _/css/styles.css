@@ -9374,24 +9374,28 @@ article.content-section #content-extra.closed {
 }
 article.content-section #content-extra.open {
   height: auto;
-  padding-bottom: 30px;
 }
 article.content-section #content-extra #content-extra-inner {
   position: relative;
+  padding-bottom: 30px;
 }
 article.content-section #content-extra #close-content-extra-btn {
   padding: 0px;
   border: none;
   position: absolute;
-  bottom: -35px;
-  left: 0px;
+  bottom: 0px;
+  left: 50%;
+  margin-left: -15px;
   width: 30px;
   height: 30px;
   line-height: 28px;
   text-align: center;
-  font-size: 18px;
+  font-size: 14px;
   color: white;
   background-color: #4b4b4b;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
 }
 article.content-section #content-extra #close-content-extra-btn:hover,
 article.content-section #content-extra #close-content-extra-btn:active,
@@ -9489,6 +9493,136 @@ article.content-section #content-extra #close-content-extra-btn:focus i {
   line-height: 36px;
   position: relative;
   z-index: 1;
+}
+.pg-section#faqs-section {
+  background: white;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, white), color-stop(1, #E9E9E9));
+  background: -ms-linear-gradient(bottom, white, #E9E9E9);
+  background: -moz-linear-gradient(center bottom, white 0%, #E9E9E9 100%);
+  background: -o-linear-gradient(#E9E9E9, white);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E9E9E9', endColorstr='white', GradientType=0);
+  padding-bottom: 30px;
+}
+.pg-section#faqs-section .container {
+  position: relative;
+  z-index: 2;
+}
+.pg-section#faqs-section .faq-items {
+  border-bottom: 2px solid #918F8F;
+  padding-top: 20px;
+}
+.pg-section#faqs-section .question {
+  font-size: 18px;
+  line-height: 20px;
+  font-family: "aleoreg", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-weight: bold;
+  margin-bottom: 15px;
+  position: relative;
+  color: #918F8F;
+}
+.pg-section#faqs-section .view-faq-btn {
+  height: 30px;
+  padding: 0px;
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 30px;
+  padding: 0px 10px 0px 10px;
+  color: white;
+  font-family: "aleoreg", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-weight: bold;
+}
+.pg-section#faqs-section .view-faq-btn:after {
+  font-family: FontAwesome;
+  line-height: 30px;
+  float: right;
+}
+.pg-section#faqs-section .answer {
+  overflow: hidden;
+  position: relative;
+}
+.pg-section#faqs-section .answer p {
+  font-size: 14px;
+  line-height: 18px;
+}
+.pg-section#faqs-section .faq-item {
+  border-top: 2px solid #918F8F;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+.pg-section#faqs-section .faq-item:after {
+  font-family: FontAwesome;
+  content: "\f086";
+  position: absolute;
+  top: -15px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  left: 50%;
+  margin-left: -15px;
+  width: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  text-align: center;
+  background-color: #918F8F;
+  color: white;
+}
+.pg-section#faqs-section .faq-item.open .view-faq-btn {
+  position: absolute;
+  bottom: -37px;
+  left: 50%;
+  margin-left: -15px;
+  width: 30px;
+  height: 30px;
+  padding: 0px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  background-color: #918F8F;
+  z-index: 2;
+}
+.pg-section#faqs-section .faq-item.open .view-faq-btn span {
+  display: none;
+}
+.pg-section#faqs-section .faq-item.open .view-faq-btn:after {
+  content: "\f068";
+  display: block;
+  width: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  text-align: center;
+}
+.pg-section#faqs-section .faq-item.open .view-faq-btn:hover,
+.pg-section#faqs-section .faq-item.open .view-faq-btn:active,
+.pg-section#faqs-section .faq-item.open .view-faq-btn:focus {
+  background-color: #4b4b4b;
+}
+.pg-section#faqs-section .faq-item.open .answer {
+  height: auto;
+}
+.pg-section#faqs-section .faq-item.closed .view-faq-btn {
+  display: block;
+  width: 100%;
+  background-color: #4b4b4b;
+}
+.pg-section#faqs-section .faq-item.closed .view-faq-btn:hover,
+.pg-section#faqs-section .faq-item.closed .view-faq-btn:active,
+.pg-section#faqs-section .faq-item.closed .view-faq-btn:focus {
+  background-color: #918F8F;
+}
+.pg-section#faqs-section .faq-item.closed .view-faq-btn:after {
+  content: "\f067";
+}
+.pg-section#faqs-section .faq-item.closed .answer {
+  height: 0px;
 }
 .pg-section#downloads-section {
   border-top: 2px solid white;

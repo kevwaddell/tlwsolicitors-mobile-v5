@@ -917,27 +917,30 @@ article.content-section {
 		}
 		
 		&.open {
-		height: auto;
-		.pad-bot(3);	
+		height: auto;	
 		}
 		
 		#content-extra-inner {
-			.rel;
+		.rel;
+		.pad-bot(3);
 		}
 		
 		#close-content-extra-btn {
 		.pad-all(0);
 		.no-border;
 		.abs;
-		.bottom(-3.5);
-		.left(0);	
+		.bottom(0);
+		//.left(0);	
+		left: 50%;
+		.mag-left(-1.5);
 		.w(3);
 		.h(3);
 		.line-h(2.8);
 		text-align: center;
-		.font-size(1.8);
+		.font-size(1.4);
 		.col(@wht);
 		.bg-col-grayDk;
+		.rounded(100%);
 			
 			&:hover, &:active, &:focus {
 			outline: none;
@@ -1029,6 +1032,146 @@ article.content-section {
 	.line-h(3.6);
 	.rel;
 	z-index: 1;
+	}
+	
+	// -->> FAQ's SECTION
+	
+	&#faqs-section {
+	.gradient(@wht, @wht , @grayLt);
+	.pad-bot(3);
+	
+		.container {
+		.rel;
+		z-index: 2;	
+		}
+	
+		.faq-items {
+		.border-bot(@gray; 0.2);
+		.pad-top(2);
+		}
+		
+		.question {
+		.font-size(1.8);
+		.line-h(2);	
+		.font-slab-serif;
+		.bold;
+		.mag-bot(1.5);
+		.rel; 
+		.txt-col-gray;
+		}
+			
+		.view-faq-btn {
+		.h(3);
+		.pad-all(0);
+		.font-size(1.4);
+		.caps;
+		.line-h(3);
+		.pad(0;1;0;1);
+		.txt-col-wht;
+		.font-slab-serif;	
+		.bold;
+			
+			&:after {
+			font-family: FontAwesome;	
+			.line-h(3);
+			.fright;
+			}
+
+		}
+				
+		.answer {
+		.over-hide;	
+		.rel;
+		
+			p {
+			.font-size(1.4);
+			.line-h(1.8);	
+			}
+		}
+		
+		.faq-item {
+		.border-top(@gray; 0.2);
+		.pad-top(2);
+		.mag-bot(2);
+		.transition(0.3s, ease-in-out);
+		.rel;
+		
+			&:after {
+			font-family: FontAwesome;
+			content: "\f086";
+			.abs;
+			.top(-1.5);
+			.rounded(100%);
+			left: 50%;
+			.mag-left(-1.5);
+			.w(3);	
+			.line-h(3);
+			.font-size(1.4);
+			text-align: center;	
+			.bg-col-gray;
+			.txt-col-wht;
+			}
+			
+			&.open {	
+				
+				.view-faq-btn {
+				.abs;
+				.bottom(-3.7);
+				left: 50%;
+				.mag-left(-1.5);
+				.w(3);
+				.h(3);
+				.pad-all(0);
+				.rounded(100%);
+				.bg-col-gray;
+				z-index: 2;
+				
+					span {
+					.none;	
+					}
+					
+					&:after {
+					content: "\f068";
+					.block;
+					.w(3);	
+					.line-h(3);
+					.font-size(1.4);
+					text-align: center;
+					}
+					
+					&:hover, &:active, &:focus {
+					.bg-col-grayDk;
+					}
+					
+				}
+				
+				.answer {
+				height: auto;	
+				}
+			}
+			
+			&.closed {
+				
+				.view-faq-btn {
+				.block;	
+				width: 100%;	
+				.bg-col-grayDk;
+					
+					&:hover, &:active, &:focus {
+					.bg-col-gray;
+					}
+				
+					&:after {
+					content: "\f067";	
+					}
+				}
+				
+				.answer {
+				.h(0);	
+				}
+			}
+		}
+		
 	}
 
 	// -->> DOWNLOADS SECTION
