@@ -6215,27 +6215,51 @@ button.btn-col-blue:active,
 button.btn-col-blue:focus {
   background-color: #184258;
 }
-#catapult-cookie-bar.rounded-corners {
-  -webkit-border-radius: 10px !important;
-  -moz-border-radius: 10px !important;
-  border-radius: 10px !important;
+html.has-cookie-bar body #catapult-cookie-bar {
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+  padding: 20px;
 }
-#catapult-cookie-bar button#catapultCookie {
+html.has-cookie-bar body #catapult-cookie-bar h3 {
+  margin-top: 0px;
+  text-transform: uppercase;
+  font-family: "aleoreg", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+}
+html.has-cookie-bar body #catapult-cookie-bar .ctcc-left-side {
+  font-size: 14px;
+  line-height: 16px;
+}
+html.has-cookie-bar body #catapult-cookie-bar .ctcc-right-side {
+  margin-bottom: 0px;
+}
+html.has-cookie-bar body #catapult-cookie-bar.rounded-corners {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+html.has-cookie-bar body #catapult-cookie-bar button#catapultCookie {
   border: none;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
   margin-right: 0px;
-  width: 70%;
+  width: 100%;
   text-transform: uppercase;
   text-align: left;
   padding: 0px 0px 0px 20px;
   height: 40px;
 }
-#catapult-cookie-bar .ctcc-right-side {
+html.has-cookie-bar body #catapult-cookie-bar button#catapultCookie:active,
+html.has-cookie-bar body #catapult-cookie-bar button#catapultCookie:focus {
+  background-color: #7A1039;
+}
+html.has-cookie-bar body #catapult-cookie-bar .ctcc-right-side {
   position: relative;
 }
-#catapult-cookie-bar .ctcc-right-side:after {
+html.has-cookie-bar body #catapult-cookie-bar .ctcc-right-side:after {
   content: "\f058";
   font-family: FontAwesome;
   position: absolute;
@@ -6243,7 +6267,7 @@ button.btn-col-blue:focus {
   top: 0px;
   color: white;
   line-height: 40px;
-  padding-right: 20%;
+  padding-right: 15px;
   font-size: 20px;
 }
 .title-banner {
