@@ -9683,6 +9683,16 @@ article.content-section #content-extra #close-content-extra-btn:focus i {
   z-index: 2;
   padding-top: 10px;
 }
+.pg-section#vacancies-section .well {
+  padding: 10px;
+}
+.pg-section#vacancies-section .well h3 {
+  font-size: 16px;
+}
+.pg-section#vacancies-section .well p {
+  margin-bottom: 0px;
+  font-size: 12px;
+}
 .pg-section#vacancies-section article.hentry {
   background-color: white;
   padding: 0px 15px 15px 15px;
