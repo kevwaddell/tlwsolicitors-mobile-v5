@@ -803,8 +803,8 @@ article.content-section {
 		}
 			
 		h1 {
-		.font-size(2.5);
-		.line-h(3);	
+		.font-size(2.2);
+		.line-h(2.7);	
 		}
 		
 		p {
@@ -1033,6 +1033,122 @@ article.content-section {
 	.rel;
 	z-index: 1;
 	}
+	
+		// -->> Jobs Section
+	&#vacancies-section {
+	.gradient(@red, @red , @redMid);
+	.pad-bot(0);
+	
+		.container-fluid {
+		.rel;
+		z-index: 2;	
+		.pad-top(1);
+		}
+
+		article.hentry {
+		.bg-col(@wht);
+		.pad(0;1.5;1.5;1.5);
+		.mag-bot(2);	
+		.rounded(10px);
+		.border(@redMid; 0.2);
+		.drop-shadow(0, 3px, 10px, 0.5);
+		
+			h4 {
+			.font-size(1.6);	
+			.mag-bot(0);
+			}
+			
+			.ref {
+			.txt-col-gray;
+			.mag-bot(0.5);	
+			.font-size(1.2);
+			}
+			
+			.close-date {
+			width: 70%;
+			.line-h(2);
+			.h(2);
+			.font-size(1.2);
+			.bg-col-red-dk;
+			.txt-col-wht;	
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: -10px;
+			margin-bottom: 10px;
+			.rounded(10px);
+			.bold;
+			}
+			
+			.description {
+			.font-size(1.2);
+			.mag-bot(1);
+			overflow: hidden;
+			text-overflow: ellipsis;
+			}
+			
+			.btn {
+			.font-slab-serif;
+			.caps;
+			.pad(0;0;0;1);
+			.font-size(1.4);
+			.line-h(3);
+			text-align: left;	
+			.no-border;
+			.bg-col-grayDk;
+			.txt-col-wht;
+			.rel;	
+				
+				&:after {
+				content: "\f0a9";	
+				font-family: FontAwesome;	
+				.abs;
+				.right(0);
+				.top(0);
+				.col(@gray);
+				.line-h(3);
+				.pad-right(1);
+				.font-size(1.4);
+				}
+			
+				&:active, &:focus {
+				.bg-col-gray;
+					&:after {
+					.col(@red);	
+					}
+				}
+
+			}
+		}
+		
+		
+	}
+	
+	// -->> CV email Message Section
+	
+	&#cv-send-section {
+	.gradient(@wht, @wht , @grayLt);	
+	.pad-bot(2);
+	.border-top(white, 0.2);
+		
+		.container-fluid {
+		.rel;
+		z-index: 2;	
+		}
+
+		.btn {
+		.bg-col-red;
+		.txt-col-wht;
+		.font-slab-serif;
+		.no-border;
+		.pad-top(0);
+		.pad-bot(0);
+		.line-h(3);	
+		.font-size(1.4);
+			i {
+			.line-h(3);		
+			}
+		}
+	} 
 	
 	// -->> FAQ's SECTION
 	
