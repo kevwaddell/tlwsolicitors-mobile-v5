@@ -8547,6 +8547,7 @@ section#post-top-banner {
   overflow: hidden;
   text-align: center;
   height: 100px;
+  border-bottom: 2px solid white;
 }
 section#post-top-banner .feat-img-part {
   position: relative;
@@ -8643,6 +8644,7 @@ section#slim-top-banner {
   -o-background-size: cover;
   background-size: cover;
   background-position: center center;
+  border-bottom: 2px solid white;
 }
 @media screen and (orientation: landscape) {
   section#slim-top-banner {
@@ -8779,6 +8781,7 @@ section#top-banner {
   -o-background-size: cover;
   background-size: cover;
   background-position: center bottom;
+  border-bottom: 2px solid white;
 }
 @media screen and (orientation: landscape) {
   section#top-banner {
@@ -9084,6 +9087,7 @@ section#top-banner #services-banner-links.col-blue a:focus {
 }
 section#testimonial-slider {
   position: relative;
+  border-bottom: 2px solid white;
 }
 section#testimonial-slider header.banner-title {
   height: 30px;
@@ -9235,6 +9239,7 @@ section.contact-links {
   -o-background-size: cover;
   background-size: cover;
   background-position: right center;
+  border-bottom: 2px solid white;
 }
 @media screen and (orientation: landscape) {
   section.contact-links {
@@ -9356,9 +9361,6 @@ section.contact-links .contact-info a.contact-info-link:hover i,
 section.contact-links .contact-info a.contact-info-link:active i,
 section.contact-links .contact-info a.contact-info-link:focus i {
   background-color: #C60751;
-}
-article.content-section {
-  border-top: 2px solid white;
 }
 article.content-section .container-fluid {
   padding-top: 15px;

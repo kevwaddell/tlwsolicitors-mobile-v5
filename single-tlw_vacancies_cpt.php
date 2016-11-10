@@ -5,6 +5,8 @@
 			
 			<main class="page-col-red">
 				
+				<?php include (STYLESHEETPATH . '/_/inc/global/awards-strip.inc'); ?>	
+				
 				<?php include (STYLESHEETPATH . '/_/inc/vacancies/sections/main-content-section.inc'); ?>
 				
 				<?php include (STYLESHEETPATH . '/_/inc/vacancies/sections/send-us-cv.inc'); ?>
