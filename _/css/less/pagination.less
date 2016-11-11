@@ -89,3 +89,60 @@
 	}
 	
 }
+
+.vacs-page-links {
+	
+	.wp-pagenavi {
+	.font-size(1.2);
+	.col(white);
+	.h(3);
+	text-align: left;
+	.font-slab-serif;
+	.bold;
+	.mag-bot(2);
+		
+		span {
+		.in-block;	
+		.line-h(3);
+		}
+		
+		span.pages {
+		.none;
+		}
+		
+		span.current {
+		.bg-col(@wht);
+		.col(@red);	
+		.w(3);
+		text-align: center;
+		.mag-right(0.2);
+		}
+		
+		span.extend {
+		.pad-left(0.5);
+		.pad-right(0.5);
+		.border-right(@wht; 0.4);	
+		}
+		
+		a {
+		.in-block;
+		.w(3);	
+		.no-text-dec;
+		.line-h(2.6);
+		text-align: center;
+		.col(white);
+		.border(@wht; 0.2);
+		.mag-right(0.2);
+		}
+		
+		a.page, a.nextpostslink, a.previouspostslink, a.last, a.first {
+		.bg-col(@trans);
+		
+			&:hover, &:active, &:focus {
+			.bg-col(@wht);
+			.txt-col-red;
+			}
+		}
+	}
+
+}

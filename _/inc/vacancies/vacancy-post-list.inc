@@ -19,7 +19,8 @@ $args = array(
 $wp_query = new WP_Query( $args );
 
 $section_title = "Positions available";	
-$post_count = $wp_query->post_count;
+$post_count = $wp_query->found_posts;
+//echo '<pre class="debug">';print_r($post_count);echo '</pre>';
 ?>
 
 <section id="vacancies-section" class="pg-section">
