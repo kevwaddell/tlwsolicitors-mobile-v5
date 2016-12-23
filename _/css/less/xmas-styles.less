@@ -1,50 +1,54 @@
 @import url(https://fonts.googleapis.com/css?family=Lobster);
 
 #xmas-popup-btn-wrap {
-.fixed;
-.left(0);
 width: 100%;
-.h(7);
+//.h(9);
 text-align: center;
-.animated;
+z-index: 100;
+.over-hide;
+.transition(0.3s, ease-in-out);
 	.wrap-inner {
-	.mag-top(2);
-	.h(5);
-	.bg-col(darken(@green, 20%));		
+	.pad-top(1);
+	.h(9);
+	.bg-col(darken(@green, 20%));	
+	.border-bot(@wht; 0.2);	
 	}
 	
 	p {
-	.line-h(5);	
+	.line-h(1.4);	
 	.col(white);
 	.bold;
-	.font-size(1.6);
+	.font-size(1.2);
+	.pad(0;4;0;4);
 	}
 
 	&.pop-up-inactive {
-	.bottom(0);	
-	animation-delay: 2s;
+	.h(9);
+	//.bottom(7);	
+	//animation-delay: 2s;
 	//.animate-delay(2s);
 	.slideInUp;
 	}
 	
 	&.pop-up-active {
-	.bottom(-7);
-	.slideInDown;	
+	.h(0);
+	//.bottom(-7);
+	//.slideInDown;	
 	}
 	
 	.btn {
-	.mag-left(1);
 	.pad(0;1.5;0;2);
-	.line-h(3);
+	.line-h(2.5);
 	.no-border;
 	.bg-col(darken(red, 10%));
 	.col(white);
 	.bold;
 	.caps;
+	.font-size(1.2);
 	
 		i {
 		.fright;
-		.line-h(3);
+		.line-h(2.5);
 		.pad-left(1);
 		.col(@green);
 		}	
@@ -56,12 +60,12 @@ text-align: center;
 	
 	.holly {
 	.abs;
-	.bottom(0);	
+	.top(0.5);	
 	background-position: center center;	
 	.bg-repeat(no-repeat);
 	.bg-size(contain);
-	.w(7);
-	.h(7);
+	.w(4);
+	.h(4);
 	
 		&.left {
 		.left(1);	
@@ -105,28 +109,33 @@ z-index: 1000;
 	.xmas-popup-inner {
 	.in-block;
 	vertical-align: middle;
-	width: 80%;
-	.rounded(20px);
+	width: 95%;
+	.rounded(10px);
 	.drop-shadow(0, 0, 20px, 0.7);
 	.bg-col(white);
 	.bg-img('xmas-logo.gif');
 	.bg-repeat(no-repeat);
 	background-position: center bottom;
-	.bg-size(50%);
-	.pad(2; 2; 22; 2);
+	.bg-size(45%);
+	.pad(1.5; 1.5; 11; 1.5);
 	text-align: left;
 	.rel;
 	
 		@media only screen and (orientation: landscape)  {
 		.bg-size(40%);
-		.pad-bot(24);
+		.pad-bot(10);
 		}
 	
 		h3 {
 		font-family: 'Lobster', cursive;
 		.col(@red);
-		.font-size(5);
-		.mag-bot(2);
+		.font-size(2);
+		.mag-bot(1);
+		}
+		
+		p, ul {
+		.font-size(1.0);	
+		.line-h(1.2);
 		}
 		
 		p {
@@ -142,25 +151,26 @@ z-index: 1000;
 		
 		ul li {
 		text-align: center;
-		.mag-bot(0.5);	
+		.mag-bot(0);	
 		}
 		
 		button#close-xmas-popup {
 		.abs;
-		.bottom(-3.5);
+		.bottom(-1);
 		left: 50%;	
-		.max-w(20);
-		.mag-left(-10);
+		.max-w(10);
+		.mag-left(-5);
 		.no-border;
 		.bg-col(darken(red, 10%));
 		.col(white);
 		.caps;
-		.pad(0;2;0;2);
-		.line-h(5);
+		.pad(0;1;0;1);
+		.font-size(1);
+		.line-h(2);
 		.bold;
 			i {
 			.fright;
-			.line-h(5);	
+			.line-h(2);	
 			.col(@green);
 			}
 			
@@ -171,25 +181,25 @@ z-index: 1000;
 		
 		.holly {
 		.abs;
-		.w(10);
-		.h(10);
+		.w(5);
+		.h(5);
 		background-position: center center;	
 		.bg-repeat(no-repeat);
 		.bg-size(contain);
 			&.tl, &.tr {
-			.top(-5);
+			.top(-2);
 			}
 			
 			&.bl, &.br {
-			.bottom(-5);
+			.bottom(-2);
 			}
 			
 			&.tl, &.bl {
-			.left(-5);	
+			.left(-2);	
 			}
 			
 			&.tr, &.br {
-			.right(-5);	
+			.right(-2);	
 			}
 			
 			&.tl {

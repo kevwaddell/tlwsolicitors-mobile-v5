@@ -14,6 +14,8 @@ Template Name: Newsletter sign up template
 			 ?>	
 			 <main class="page-col-red">
 				
+				<?php include (STYLESHEETPATH . '/_/inc/xmas/pop-up.inc'); ?>
+				
 				<?php include (STYLESHEETPATH . '/_/inc/global/awards-strip.inc'); ?>	
 				
 				<?php if (has_post_thumbnail()) { ?>

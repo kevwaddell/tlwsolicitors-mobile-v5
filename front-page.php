@@ -8,6 +8,8 @@
 	?>
 	<!-- MAIN CONTENT START -->
 	<main>
+				
+		<?php include (STYLESHEETPATH . '/_/inc/xmas/pop-up.inc'); ?>
 		
 		<?php include (STYLESHEETPATH . '/_/inc/global/awards-strip.inc'); ?>	
 
