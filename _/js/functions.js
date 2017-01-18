@@ -42,6 +42,7 @@
 	  
 	$(document).ready(function (){
 	
+/*
 	 $(".selectpicker").selectpicker({
       style: 'btn-default btn-lg hp-select',
       mobile: true,
@@ -53,6 +54,7 @@
 		mobile: true,
 		width: '100%'
 	});
+*/
 	 
 				
 	$('body').on(event_type,'button#user-btn', function(){
@@ -391,5 +393,32 @@
 		});
 
 	});	
+	
+	/* END DOC READY FUNCTION */
+		
+		$(window).bind("load", function(){
+			
+			//console.log("Loading");
+			
+			 $(".selectpicker").selectpicker({
+		      style: 'btn-lg hp-select',
+		      size: 5
+			  });
+			  
+			 $('.selectpicker').find('select').selectpicker({
+				style: 'btn btn-group btn-default', 
+				width: '100%'
+			});
+			
+			$('.full-bg-img').each(function(index, Element) {
+				var src = $(Element).data('src');
+				//console.log(src);
+				if (src !== undefined) {
+					$(Element).css('background-image', 'url(' +src+ ')');
+		  		}
+			});
+	
+		});
+
 	
 })(window.jQuery);

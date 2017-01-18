@@ -11,6 +11,9 @@ $main_email = get_field('main_email', 'option');
 ?>		
 
 <?php if ($today < $turn_off_date) { ?>
+<style>
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+</style>
 <div id="xmas-popup-btn-wrap" class="pop-up-inactive">
 	<div  class="wrap-inner">
 		<div class="container-fluid">

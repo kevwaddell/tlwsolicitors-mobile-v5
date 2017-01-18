@@ -8,7 +8,6 @@
  * Copyright 2013-2015 bootstrap-select
  * Licensed under MIT (https://github.com/silviomoreto/bootstrap-select/blob/master/LICENSE)
  */
-@import url(https://fonts.googleapis.com/css?family=Lobster);
 .bootstrap-select {
   width: 220px \0;
   /*IE9 and below*/
@@ -3055,29 +3054,29 @@ Copyright (c) 2014 Daniel Eden
 /* FONTS */
 @font-face {
   font-family: 'open_sanslight';
-  src: url('fonts/OpenSans-Light-webfont.eot');
-  src: url('fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/OpenSans-Light-webfont.woff') format('woff'), url('fonts/OpenSans-Light-webfont.ttf') format('truetype'), url('fonts/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+  src: url('/wp-content/themes/tlwsolicitors-desktop-v5/_/css/fonts/OpenSans-Light-webfont.eot');
+  src: url('/wp-content/themes/tlwsolicitors-desktop-v5/_/css/fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'), url('/wp-content/themes/tlwsolicitors-desktop-v5/_/css/fonts/OpenSans-Light-webfont.woff') format('woff'), url('/wp-content/themes/tlwsolicitors-desktop-v5/_/css/fonts/OpenSans-Light-webfont.ttf') format('truetype'), url('/wp-content/themes/tlwsolicitors-desktop-v5/_/css/fonts/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'aleoreg';
-  src: url('fonts/aleo-regular-webfont.eot');
+  src: url('/wp-content/themes/tlwsolicitors-desktop-v5/_/css/fonts/aleo-regular-webfont.eot');
   src: url('fonts/aleo-regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/aleo-regular-webfont.woff') format('woff'), url('fonts/aleo-regular-webfont.ttf') format('truetype'), url('fonts/aleo-regular-webfont.svg#aleoregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'aleobold';
-  src: url('fonts/aleo-bold-webfont.eot');
-  src: url('fonts/aleo-bold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/aleo-bold-webfont.woff') format('woff'), url('fonts/aleo-bold-webfont.ttf') format('truetype'), url('fonts/aleo-bold-webfont.svg#aleobold') format('svg');
+  src: url('/wp-content/themes/tlwsolicitors-desktop-v5/_/css/fonts/aleo-bold-webfont.eot');
+  src: url('/wp-content/themes/tlwsolicitors-desktop-v5/_/css/fonts/aleo-bold-webfont.eot?#iefix') format('embedded-opentype'), url('/wp-content/themes/tlwsolicitors-desktop-v5/_/css/fonts/aleo-bold-webfont.woff') format('woff'), url('/wp-content/themes/tlwsolicitors-desktop-v5/_/css/fonts/aleo-bold-webfont.ttf') format('truetype'), url('/wp-content/themes/tlwsolicitors-desktop-v5/_/css/fonts/aleo-bold-webfont.svg#aleobold') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'FontAwesome';
-  src: url('fonts/fontawesome-webfont.eot?v=4.4.0');
-  src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff2?v=4.4.0') format('woff2'), url('fonts/fontawesome-webfont.woff?v=4.4.0') format('woff'), url('fonts/fontawesome-webfont.ttf?v=4.4.0') format('truetype'), url('fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');
+  src: url('/wp-content/themes/tlwsolicitors-desktop-v5/_/css/fonts/fontawesome-webfont.eot?v=4.4.0');
+  src: url('/wp-content/themes/tlwsolicitors-desktop-v5/_/css/fonts/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'), url('/wp-content/themes/tlwsolicitors-desktop-v5/_/css/fonts/fontawesome-webfont.woff2?v=4.4.0') format('woff2'), url('/wp-content/themes/tlwsolicitors-desktop-v5/_/css/fonts/fontawesome-webfont.woff?v=4.4.0') format('woff'), url('/wp-content/themes/tlwsolicitors-desktop-v5/_/css/fonts/fontawesome-webfont.ttf?v=4.4.0') format('truetype'), url('/wp-content/themes/tlwsolicitors-desktop-v5/_/css/fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -5471,7 +5470,7 @@ Copyright (c) 2014 Daniel Eden
   top: 0px;
   right: 0px;
   height: 100%;
-  background-image: url(img/striped-img-overlay.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/striped-img-overlay.png);
   background-blend-mode: color-burn;
 }
 .col-overlay {
@@ -5609,7 +5608,7 @@ h5 {
   -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
   background-color: white;
-  background-image: url(img/tlw-logo.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/tlw-logo.png);
   background-repeat: no-repeat;
   background-position: center 20px;
   padding: 20px;
@@ -5791,7 +5790,7 @@ header[role="banner"] .logo a {
   display: block;
   height: 50px;
   width: 100%;
-  background-image: url(img/tlw-logo-wide.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/tlw-logo-wide.png);
   background-repeat: no-repeat;
   background-position: left center;
 }
@@ -5830,7 +5829,7 @@ header[role="banner"] .header-action-btns .btn:focus {
   background-color: #E9E9E9;
 }
 html.svg header[role="banner"] .logo a {
-  background-image: url(img/tlw-logo-wide.svg);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/tlw-logo-wide.svg);
 }
 #top-nav {
   overflow: hidden;
@@ -6519,7 +6518,7 @@ article.page .main-txt .well.striped-bg,
 article.post .main-txt .well.striped-bg,
 article.tlw_vacancies_cpt .main-txt .well.striped-bg,
 article.tlw_landing_page .main-txt .well.striped-bg {
-  background-image: url(img/striped-img-overlay.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/striped-img-overlay.png);
   background-blend-mode: color-burn;
 }
 article.page .main-txt .thank-you-message,
@@ -7191,7 +7190,7 @@ section.social-feed span.date {
   top: 0px;
   width: 100%;
   height: 100%;
-  background-image: url(img/thin-stripe-wht.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/thin-stripe-wht.png);
   -moz-opacity: 0.2;
   -khtml-opacity: 0.2;
   -webkit-opacity: 0.2;
@@ -8030,7 +8029,7 @@ body#landing-page .col-overlay {
   height: 100%;
 }
 body#landing-page .striped-overlay {
-  background-image: url(img/thin-stripe-wht.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/thin-stripe-wht.png);
   -moz-opacity: 0.5;
   -khtml-opacity: 0.5;
   -webkit-opacity: 0.5;
@@ -8544,7 +8543,7 @@ body#landing-page .lp-form .gform_page_footer input.gform_button {
   left: 0px;
   width: 100%;
   height: 100%;
-  background-image: url(img/thin-stripe-wht.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/thin-stripe-wht.png);
   -moz-opacity: 0.3;
   -khtml-opacity: 0.3;
   -webkit-opacity: 0.3;
@@ -8708,7 +8707,7 @@ section#post-top-banner .img-overlay {
   left: 0px;
   background-color: #4b4b4b;
   background-color: rgba(75, 75, 75, 0.6);
-  background-image: url(img/thin-stripe-wht.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/thin-stripe-wht.png);
   z-index: 0;
   -moz-opacity: 0.2;
   -khtml-opacity: 0.2;
@@ -8777,7 +8776,7 @@ section#slim-top-banner .img-overlay {
   left: 0px;
   background-color: #4b4b4b;
   background-color: rgba(75, 75, 75, 0.6);
-  background-image: url(img/thin-stripe-wht.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/thin-stripe-wht.png);
   z-index: 0;
   -moz-opacity: 0.2;
   -khtml-opacity: 0.2;
@@ -8925,7 +8924,7 @@ section#top-banner .img-overlay {
   left: 0px;
   background-color: #4b4b4b;
   background-color: rgba(75, 75, 75, 0.6);
-  background-image: url(img/thin-stripe-wht.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/thin-stripe-wht.png);
   z-index: 0;
   -moz-opacity: 0.2;
   -khtml-opacity: 0.2;
@@ -9336,7 +9335,7 @@ section.contact-links .img-overlay {
   top: 0px;
   left: 0px;
   background-color: rgba(75, 75, 75, 0.6);
-  background-image: url(img/thin-stripe-wht.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/thin-stripe-wht.png);
   z-index: 0;
   -moz-opacity: 0.2;
   -khtml-opacity: 0.2;
@@ -9676,7 +9675,7 @@ article.content-section #content-extra #close-content-extra-btn:focus i {
   height: 100%;
   top: 0px;
   left: 0px;
-  background-image: url(img/thin-stripe-wht.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/thin-stripe-wht.png);
   z-index: 0;
   -moz-opacity: 0.2;
   -khtml-opacity: 0.2;
@@ -9704,7 +9703,7 @@ article.content-section #content-extra #close-content-extra-btn:focus i {
 }
 .pg-section.with-icon-logo {
   background-attachment: fixed;
-  background-image: url(img/bg-icon-logo-wht.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/bg-icon-logo-wht.png);
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: 1140px;
@@ -10338,7 +10337,7 @@ article.content-section #content-extra #close-content-extra-btn:focus i {
 .pg-section#toolkit-section .bg-img .img-overlay {
   width: 100%;
   height: 100%;
-  background-image: url(img/thin-stripe-wht.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/thin-stripe-wht.png);
   -moz-opacity: 0.2;
   -khtml-opacity: 0.2;
   -webkit-opacity: 0.2;
@@ -11135,7 +11134,7 @@ article.content-section #content-extra #close-content-extra-btn:focus i {
   height: 100%;
   top: 0px;
   left: 0px;
-  background-image: url(img/thin-stripe-wht.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/thin-stripe-wht.png);
   z-index: 0;
   -moz-opacity: 0.1;
   -khtml-opacity: 0.1;
@@ -11169,7 +11168,7 @@ article.content-section #content-extra #close-content-extra-btn:focus i {
   color: #C60751;
 }
 html.svg section.pg-section .with-icon-logo {
-  background-image: url(img/bg-icon-logo-wht.svg);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/bg-icon-logo-wht.svg);
 }
 /** --------------------------- /
 /* User styles */
@@ -11178,7 +11177,7 @@ body#login #user-wrap {
   width: 100%;
   height: 100%;
   min-height: 400px;
-  background-image: url(img/user-bg.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/user-bg.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-color: #E9E9E9;
@@ -11197,7 +11196,7 @@ body#login .wrap-center {
   text-align: center;
   padding: 20px;
   height: 100%;
-  background-image: url(img/thin-stripe-wht.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/thin-stripe-wht.png);
 }
 body#login .wrap-center:before {
   content: "";
@@ -11215,7 +11214,7 @@ body#login .login {
   padding: 90px 20px 20px 20px;
   background-color: white;
   background-color: rgba(255, 255, 255, 0.9);
-  background-image: url(img/tlw-logo-wide.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/tlw-logo-wide.png);
   background-repeat: no-repeat;
   background-position: 50% 10px;
   width: 80%;
@@ -11588,11 +11587,11 @@ body#login .login .tml-action-links a:focus {
 }
 #xmas-popup-btn-wrap .holly.left {
   left: 10px;
-  background-image: url(img/holly-tr.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/holly-tr.png);
 }
 #xmas-popup-btn-wrap .holly.right {
   right: 10px;
-  background-image: url(img/holly-tl.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/holly-tl.png);
 }
 #xmas-popup-wrap {
   position: fixed;
@@ -11630,7 +11629,7 @@ body#login .login .tml-action-links a:focus {
   -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
   background-color: white;
-  background-image: url(img/xmas-logo.gif);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/xmas-logo.gif);
   background-repeat: no-repeat;
   background-position: center bottom;
   -webkit-background-size: 45%;
@@ -11744,16 +11743,16 @@ body#login .login .tml-action-links a:focus {
   right: -20px;
 }
 #xmas-popup-wrap .xmas-popup-inner .holly.tl {
-  background-image: url(img/holly-tl.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/holly-tl.png);
 }
 #xmas-popup-wrap .xmas-popup-inner .holly.tr {
-  background-image: url(img/holly-tr.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/holly-tr.png);
 }
 #xmas-popup-wrap .xmas-popup-inner .holly.bl {
-  background-image: url(img/holly-bl.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/holly-bl.png);
 }
 #xmas-popup-wrap .xmas-popup-inner .holly.br {
-  background-image: url(img/holly-br.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/holly-br.png);
 }
 .snowflake {
   position: absolute;
@@ -11779,13 +11778,13 @@ body#login .login .tml-action-links a:focus {
   left: 50%;
 }
 .snowflake.snowflake_style1 {
-  background-image: url(img/snowflake-1.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/snowflake-1.png);
   top: -50px;
   margin-left: -20%;
   animation: move-snow-1 10s, infinite-spinning 10s;
 }
 .snowflake.snowflake_style2 {
-  background-image: url(img/snowflake-2.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/snowflake-2.png);
   top: -30px;
   margin-left: -30%;
   animation: move-snow-2 7s 2s, infinite-spinning 7s;
@@ -11793,34 +11792,34 @@ body#login .login .tml-action-links a:focus {
 .snowflake.snowflake_style3 {
   top: -70px;
   margin-left: -40%;
-  background-image: url(img/snowflake-3.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/snowflake-3.png);
   animation: move-snow-3 5s 3s, infinite-spinning 5s;
 }
 .snowflake.snowflake_style4 {
   top: -50px;
   margin-left: -50%;
-  background-image: url(img/snowflake-1.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/snowflake-1.png);
   animation: move-snow-4 10s 2s, infinite-spinning-back 10s;
 }
 .snowflake.snowflake_style5 {
-  background-image: url(img/snowflake-2.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/snowflake-2.png);
   top: -30px;
   animation: move-snow-5 8s 3s, infinite-spinning 7s;
 }
 .snowflake.snowflake_style6 {
   top: -70px;
   margin-left: 50%;
-  background-image: url(img/snowflake-3.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/snowflake-3.png);
   animation: move-snow-6 11s 2s, infinite-spinning-back 5s;
 }
 .snowflake.snowflake_style7 {
   top: -50px;
   margin-left: 40%;
-  background-image: url(img/snowflake-1.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/snowflake-1.png);
   animation: move-snow-7 6s 4s, infinite-spinning 10s;
 }
 .snowflake.snowflake_style8 {
-  background-image: url(img/snowflake-2.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/snowflake-2.png);
   top: -30px;
   margin-left: 30%;
   animation: move-snow-8 7s 1s, infinite-spinning-back 7s;
@@ -11828,7 +11827,7 @@ body#login .login .tml-action-links a:focus {
 .snowflake.snowflake_style9 {
   top: -50px;
   margin-left: 20%;
-  background-image: url(img/snowflake-1.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/snowflake-1.png);
   animation: move-snow-9 7s 1s, infinite-spinning 10s;
 }
 .snowflake.lg {
@@ -11986,7 +11985,7 @@ body.logged-in #xmas-popup-btn-wrap .holly.left {
 }
 #awards-pop-up #awards-pop-up-inner .inner-right {
   float: right;
-  background-image: url(img/law-awards-text-right-2016.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/law-awards-text-right-2016.png);
   background-position: 5px center;
   background-repeat: no-repeat;
   -webkit-background-size: 90%;
@@ -12010,7 +12009,7 @@ body.logged-in #xmas-popup-btn-wrap .holly.left {
 #awards-pop-up #awards-pop-up-inner #nla-logo {
   height: 100%;
   width: 100%;
-  background-image: url(img/northern-Law-Awards-logo.png);
+  background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/northern-Law-Awards-logo.png);
   background-repeat: no-repeat;
   background-position: right center;
   -webkit-background-size: 90%;

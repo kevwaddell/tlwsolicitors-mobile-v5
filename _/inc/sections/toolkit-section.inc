@@ -15,13 +15,14 @@ $page_icon = get_field('page_icon', $pg->ID);
 
 $post_thumbnail_id = get_post_thumbnail_id( $pg->ID );
 $feat_img = wp_get_attachment_image_src($post_thumbnail_id, 'full' );
+$feat_img_thumb = wp_get_attachment_image_src($post_thumbnail_id, 'thumbnail' );
 ?>
 
 <section id="<?php echo $section['acf_fc_layout']; ?>" class="pg-section links-1 bg-col-<?php echo $color; ?>">
 	
 	<h2 class="text-center section-header bg-col-grayDk"><?php echo get_the_title($toolkit_page); ?> <?php echo get_the_title($pg->ID); ?></h2>
 	
-	<div class="bg-img" style="background-image: url(<?php echo $feat_img[0] ; ?>)"><div class="img-overlay"></div></div>
+	<div class="bg-img full-bg-img" data-src="<?php echo $feat_img[0];?>" style="background-image: url(<?php echo $feat_img_thumb[0] ; ?>)"><div class="img-overlay"></div></div>
 
 	<div class="tk-text">
 		<div class="container-fluid">
