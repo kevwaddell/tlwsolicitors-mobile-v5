@@ -400,13 +400,15 @@
 			
 			//console.log("Loading");
 			
-			 $(".selectpicker").selectpicker({
-		      style: 'btn-lg hp-select',
+			$(".selectpicker").selectpicker({
+		      style: 'btn-default btn-lg hp-select',
+		      mobile: true,
 		      size: 5
 			  });
 			  
-			 $('.selectpicker').find('select').selectpicker({
+			  $('.selectpicker').find('select').selectpicker({
 				style: 'btn btn-group btn-default', 
+				mobile: true,
 				width: '100%'
 			});
 			
