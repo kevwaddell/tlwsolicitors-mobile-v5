@@ -5793,6 +5793,10 @@ header[role="banner"] .logo a {
   background-image: url(/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/tlw-logo-wide.png);
   background-repeat: no-repeat;
   background-position: left center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
 }
 header[role="banner"] .logo a:hover,
 header[role="banner"] .logo a:active,

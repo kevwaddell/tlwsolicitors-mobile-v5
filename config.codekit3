@@ -1382,6 +1382,15 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/_\/js\/modernizr-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/_\/js\/min\/modernizr-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/archive-tlw_vacancies_cpt.php": {
 		"ft": 8192,
 		"oA": 2,

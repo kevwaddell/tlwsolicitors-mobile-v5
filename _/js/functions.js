@@ -3,16 +3,6 @@
 	var event_type = 'touchstart';
 	
 	var gformSubmitted = false;
- 
-	$(".gform_wrapper form").submit(function(event) {
-	    if (gformSubmitted) {
-	        event.preventDefault();
-	    }
-	    else {
-	        gformSubmitted = true;
-	        $("input[type='submit']", this).val("Processing, please wait...");
-	    }
-	});
 	
 	function getUrlVars() {
 	    var hash;
@@ -41,8 +31,16 @@
 
 	  
 	$(document).ready(function (){
+	$(".gform_wrapper form").submit(function(event) {
+	    if (gformSubmitted) {
+	        event.preventDefault();
+	    }
+	    else {
+	        gformSubmitted = true;
+	        $("input[type='submit']", this).val("Processing, please wait...");
+	    }
+	});
 	
-/*
 	 $(".selectpicker").selectpicker({
       style: 'btn-default btn-lg hp-select',
       mobile: true,
@@ -54,7 +52,6 @@
 		mobile: true,
 		width: '100%'
 	});
-*/
 	 
 				
 	$('body').on(event_type,'button#user-btn', function(){
@@ -399,18 +396,6 @@
 		$(window).bind("load", function(){
 			
 			//console.log("Loading");
-			
-			$(".selectpicker").selectpicker({
-		      style: 'btn-default btn-lg hp-select',
-		      mobile: true,
-		      size: 5
-			  });
-			  
-			  $('.selectpicker').find('select').selectpicker({
-				style: 'btn btn-group btn-default', 
-				mobile: true,
-				width: '100%'
-			});
 			
 			$('.full-bg-img').each(function(index, Element) {
 				var src = $(Element).data('src');
