@@ -10,7 +10,7 @@ add_action( 'after_setup_theme', 'editor_styles' );
 function tlw_scripts() {
 	
 	// Load stylesheets.
-	wp_enqueue_style( 'styles', get_stylesheet_directory_uri().'/_/css/styles.css', array('twitter-bootstrap'), filemtime( get_stylesheet_directory().'/_/css/styles.css' ), 'screen' );
+	wp_enqueue_style( 'styles', get_stylesheet_directory_uri().'/_/css/styles.css', array('twitter-bootstrap'), filemtime( get_stylesheet_directory().'/_/css/styles.css' ), '(min-width: 320px)' );
 	
 	// Load JS
 	$functions_dep = array(
