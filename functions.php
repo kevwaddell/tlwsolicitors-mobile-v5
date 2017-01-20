@@ -13,6 +13,18 @@ function tlw_scripts() {
 	//wp_enqueue_style( 'styles', get_stylesheet_directory_uri().'/_/css/styles.css', array('twitter-bootstrap'), filemtime( get_stylesheet_directory().'/_/css/styles.css' ), '(min-width: 320px)' );
 	wp_enqueue_style( 'styles', get_stylesheet_directory_uri().'/_/css/styles.css', null, filemtime( get_stylesheet_directory().'/_/css/styles.css' ), '(min-width: 320px)' );
 	
+	if (is_page() || is_single()) {
+	wp_dequeue_style('wprssmi_template_styles');	
+	}
+	
+	if( !has_shortcode( $post->post_content, 'theme-my-login') ) {
+	wp_dequeue_style('theme-my-login');
+	}
+	
+	if ( isset($_COOKIE['catAccCookies']) ) {
+	wp_dequeue_style('cookie-consent-style');
+	}
+
 	// Load JS
 	$functions_dep = array(
 	'jquery',
