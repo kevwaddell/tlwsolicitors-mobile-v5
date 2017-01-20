@@ -46,6 +46,17 @@ function tlw_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'tlw_scripts' );
 
+function custom_dequeue() {
+    wp_dequeue_style('autoptimize-toolbar');
+    wp_deregister_style('autoptimize-toolbar');
+    
+    wp_dequeue_style('gforms_css');
+    wp_deregister_style('gforms_css');
+}
+
+add_action( 'wp_enqueue_scripts', 'custom_dequeue', 9999 );
+add_action( 'wp_head', 'custom_dequeue', 9999 );
+
 //if ($_SERVER['SERVER_NAME']=='www.tlwsolicitors.co.uk') {
 function add_async_attribute($tag, $handle) {
 	add_filter( 'gform_init_scripts_footer', '__return_true' );
