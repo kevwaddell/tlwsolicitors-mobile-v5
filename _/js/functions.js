@@ -397,6 +397,8 @@
 			
 			//console.log("Loading");
 			
+			$('body').removeClass('mobile-css');
+			
 			$('.full-bg-img').each(function(index, Element) {
 				var src = $(Element).data('src');
 				//console.log(src);
