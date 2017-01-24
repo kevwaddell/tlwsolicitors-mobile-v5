@@ -54,7 +54,6 @@ function custom_dequeue() {
 add_action( 'wp_enqueue_scripts', 'custom_dequeue', 9999 );
 add_action( 'wp_head', 'custom_dequeue', 9999 );
 
-//if ($_SERVER['SERVER_NAME']=='www.tlwsolicitors.co.uk') {
 function add_async_attribute($tag, $handle) {
 	add_filter( 'gform_init_scripts_footer', '__return_true' );
 	//echo '<pre>';print_r($handle);echo '</pre>';
@@ -85,7 +84,25 @@ function add_async_attribute($tag, $handle) {
 }
 
 add_filter('script_loader_tag', 'add_async_attribute', 10, 2);
-//}
+
+
+add_action('wp_head','add_load_css',7);
+function add_load_css(){ 
+    ?>
+    <script id="loadcss"><?php 
+    readfile(get_stylesheet_directory() . '/_/js/loadCSS.js'); 
+    ?></script><?php
+}
+
+add_filter('style_loader_tag', 'link_to_loadCSS_script',9999,3);
+function link_to_loadCSS_script($html, $handle, $href ) {
+	//echo '<pre>';print_r($handle);echo '</pre>';
+    $dom = new DOMDocument();
+    $dom->loadHTML($html);
+    $a = $dom->getElementById($handle.'-css');
+    return "<script>loadCSS('" . $a->getAttribute('href') . "',0,'" . $a->getAttribute('media') . "');</script>\n";
+}
+
 
 
 function ewp_remove_script_version( $src ){
