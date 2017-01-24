@@ -44,7 +44,8 @@
 	<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/_/img/favicon.ico">
 	<link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-
+	<style><?php readfile(get_stylesheet_directory() . '/_/css/criticalCSS.css')."</style>"; ?></style>
+	<script id="loadcss"><?php readfile(get_stylesheet_directory() . '/_/js/loadCSS.js');  ?></script>
 	
 	<?php 
 	$form_active = get_field('lp_form_active');
@@ -55,10 +56,9 @@
 	gravity_form_enqueue_scripts( $form->id );
 	}	
 	?>
+	
 	<?php wp_head(); ?>
-		<style>
-	<?php readfile(get_stylesheet_directory() . '/_/css/criticalCSS.css')."</style>"; ?>
-	</style>
+	
 	<!-- Adwords Call tracking -->
 	<script type="text/javascript">
 	(function(a,e,c,f,g,h,b,d){var
