@@ -313,6 +313,14 @@
 		"oF": 0,
 		"opt": 0
 		},
+	"\/_\/css\/img\/tlw-logo-wide.png": {
+		"ft": 32768,
+		"iS": 4080,
+		"oA": 0,
+		"oAP": "\/_\/css\/img\/tlw-logo-wide.png",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/_\/css\/img\/tlw-logo-wide.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -1169,6 +1177,12 @@
 		"oAP": "\/_\/inc\/landing-page\/head-html.inc",
 		"oF": 0
 		},
+	"\/_\/inc\/landing-page\/head-html.inc.sb-948e6424-6aaVlc": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_\/inc\/landing-page\/head-html.inc.sb-948e6424-6aaVlc",
+		"oF": 0
+		},
 	"\/_\/inc\/posts\/archive-dropdown.inc": {
 		"ft": 8192,
 		"oA": 2,
@@ -1445,13 +1459,22 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/_\/js\/loadCSS-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/_\/js\/min\/loadCSS-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/_\/js\/loadCSS.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/_\/js\/min\/loadCSS-min.js",
-		"oF": 0,
-		"sC": 1,
+		"oAP": "\/_\/js\/loadCSS-min.js",
+		"oF": 2,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/_\/js\/map.js": {
