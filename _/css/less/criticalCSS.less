@@ -17,6 +17,10 @@ margin: 0;
 background-color: #FFF;
 overflow: hidden;
 
+	* {
+	box-sizing: border-box;	
+	}
+
 	.text-hide {
 	font: 0/0 a;
 	color: transparent;
@@ -29,17 +33,26 @@ overflow: hidden;
 	position: relative;
 	height: 100%;
 	background-color: #FFF;
-	background-image: url("/wp-content/themes/tlwsolicitors-mobile-v5/_/css/img/spinner.svg");
-	background-repeat: no-repeat;
-	background-position: center center;
 	overflow: hidden;
 	}
 	
-	#top-nav, 
-	main ,
-	#footer-nav,
+	#main-content {
+	position: absolute;
+	margin-top: 50px;
+	top: 0;
+	left: 0;
+	bottom: 50px;
+	width: 100%;
+	overflow-x: hidden;
+	}
+	
+	#top-nav,
 	#search-pop-up,
+	.pg-section,
+	.entry,
 	.header-action-btns,
+	#footer-info,
+	#continue-read-btn,
 	&#landing-page .contact-details {
 	display: none;	
 	}
@@ -70,6 +83,153 @@ overflow: hidden;
 				
 		}
 		
+	}
+	
+	.img-overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(75, 75, 75, .6);
+	background-image: url('/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/thin-stripe-wht.png');
+	z-index: 0;
+	opacity: 0.2;
+	}
+	
+	.top-drk-grad {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 50%;
+	background: -moz-linear-gradient(top, #333 0, rgba(51, 51, 51, 0) 100%);
+	background: -webkit-linear-gradient(top, #333 0, rgba(51, 51, 51, 0) 100%);
+	background: linear-gradient(to bottom, #333 0, rgba(51, 51, 51, 0) 100%);
+	opacity: 0.7;
+	z-index: 0;	
+	}
+	
+	#awards-pop-up {
+	height: 62px;
+	background-color: #036937;
+	border-bottom: 2px solid white;
+	box-shadow: inset 0 -5px 10px rgba(0, 0, 0, .5);	
+		#awards-pop-up-inner, button#close-awards-btn {
+		display: none;	
+		}
+	}
+	
+	.top-banner-img {
+	min-height: 30vh;
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom;
+	border-bottom: 2px solid #fff;
+		&#top-banner {
+		height: 310px;	
+		}	
+		.tag-scroller, 
+		.hp-banner-links {
+		display: none;	
+		}
+	}
+	
+	#testimonial-slider {
+	position: relative;
+	border-bottom: 2px solid #fff;	
+		.banner-title {
+		height: 30px;
+		background-color: #4b4b4b;
+		z-index: 2;
+		border-bottom: 2px solid #fff;	
+			.container-fluid {
+			display: none;	
+			}
+		}
+		
+		.carousel-inner {
+		height: 150px;
+		position: relative;	
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: left center;
+		}
+		
+		.item {
+		display: none;	
+		}
+	}
+	
+	.col-strip {
+	height: 12px;
+	border-bottom: 2px solid #fff;
+	z-index: 2;
+	position: relative;
+		.col-block {
+		height: 10px;
+		width: 20%;
+		float: left;
+		border-right: 2px solid #fff	
+		}	
+		
+		.col-purple {
+		background-color: #A677B4;	
+		}
+		
+		.col-green {
+		background-color: #ACD15C;
+		}
+		
+		.col-pink {
+		background-color: #EA5677;
+		}
+		
+		.col-orange {
+		background-color: #FBAD4F;	
+		}
+		
+		.col-blue {
+		background-color: #2D7EA9;
+		border: none;
+		}
+	}
+	
+	#global-tel-num {
+	height: 52px;
+	border-bottom: 2px solid #fff;
+	position: relative;
+	background-color: #4b4b4b;
+		.number {
+		display: none;	
+		}
+		
+		.overlay {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-image: url('/wp-content/themes/tlwsolicitors-desktop-v5/_/css/img/thin-stripe-wht.png');
+		z-index: 0;
+		opacity: 0.1;
+		box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.7)	
+		}
+	}
+	
+	#footer-nav {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 50px;
+	background-color: #4b4b4b;
+	border-top: 2px solid white;
+	box-shadow: 0 0 20px rgba(0, 0, 0, .7);
+		.links {
+		display: none;	
+		}	
 	}
 	
 }
