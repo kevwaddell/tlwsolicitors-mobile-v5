@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js" prefix="og: http://ogp.me/ns#">
 <head id="www-wordpress-test-dev" data-template-set="tlw-base-theme">
-
+	<style>body{opacity: 0;}</style>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<?php header('X-UA-Compatible: IE=edge,chrome=1'); ?>
 	<meta name="robots" content="noindex, nofollow" /> 
