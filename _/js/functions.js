@@ -397,7 +397,7 @@
 			
 			//console.log("Loading");
 			
-			$('body').removeClass('atfc-mobile-css');
+			//$('body').removeClass('atfc-mobile-css');
 			
 			$('.full-bg-img').each(function(index, Element) {
 				var src = $(Element).data('src');
