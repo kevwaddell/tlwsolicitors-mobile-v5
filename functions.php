@@ -146,6 +146,10 @@ function add_async_attribute($tag, $handle) {
    // add script handles to the array below
    $scripts_to_asyc = array(    
    'addtoany',
+   'gform_json',
+   'gform_gravityforms',
+   'gform_conditional_logic',
+   'gform_placeholder',
    'tml-themed-profiles',
    'jquery',
    'bootstrap-min',
@@ -155,13 +159,6 @@ function add_async_attribute($tag, $handle) {
    'functions',
    'wp-embed'
    );
-   
-    if ($handle == 'gform_json' || $handle == 'gform_gravityforms' || $handle == 'gform_conditional_logic' || $handle == 'gform_placeholder') {
-	$scripts_to_asyc[] = 'gform_json';   
-	$scripts_to_asyc[] = 'gform_gravityforms';
-	$scripts_to_asyc[] = 'gform_conditional_logic';
-	$scripts_to_asyc[] = 'gform_placeholder';
-	}
    
     foreach($scripts_to_asyc as $asyn_script) {
       if ($asyn_script === $handle) {
