@@ -21,9 +21,11 @@ function tlw_scripts() {
 		wp_dequeue_style('theme-my-login');
 		}
 		
+/*
 		if ( isset($_COOKIE['catAccCookies']) ) {
 		wp_dequeue_style('cookie-consent-style');
 		}
+*/
 	
 		// Load JS
 		$functions_dep = array(
@@ -138,16 +140,20 @@ function add_async_attribute($tag, $handle) {
 	if (!is_admin()) {
 	
 	add_filter( 'gform_init_scripts_footer', '__return_true' );
+	
 	//echo '<pre>';print_r($handle);echo '</pre>';
    
    // add script handles to the array below
-   $scripts_to_asyc = array(
+   $scripts_to_asyc = array(    
+   'addtoany',
+   'tml-themed-profiles',
    'jquery',
    'bootstrap-min',
    'jquery-cookie',
    'slim-scroll', 
    'bootstrap-select',
-   'functions'
+   'functions',
+   'wp-embed'
    );
    
     if ($handle == 'gform_json' || $handle == 'gform_gravityforms' || $handle == 'gform_conditional_logic' || $handle == 'gform_placeholder') {

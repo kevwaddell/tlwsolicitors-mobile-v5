@@ -2,6 +2,7 @@
 		$freephone_num = get_field('freephone_num', 'option');
 		$contact_pg = get_page_by_title( "Contact us");
 		$location = get_field('global_location', 'options');
+		global $post;
 		//echo '<pre>';print_r($contact_pg);echo '</pre>';
 		?>
 		<!-- FOOTER START -->

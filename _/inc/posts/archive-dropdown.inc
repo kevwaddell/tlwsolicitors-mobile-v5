@@ -19,7 +19,7 @@ $archives = wp_get_archives($archives_args);
 	</select>
 	
 </div>
-<script type="text/javascript">
+<script defer type="text/javascript">
 	<!--
 	var archive_dropdown = document.getElementById("archive-dd");
 	function onArchiveChange() {

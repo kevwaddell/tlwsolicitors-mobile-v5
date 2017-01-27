@@ -22,7 +22,7 @@ $cats = get_categories($cats_args);
 	</select>
 	
 </div>
-<script type="text/javascript">
+<script defer type="text/javascript">
 	<!--
 	var dropdown = document.getElementById("cats");
 	function onCatsChange() {
