@@ -16,6 +16,11 @@ Template Name: Sitemap page
 	<?php include (STYLESHEETPATH . '/_/inc/global/awards-strip.inc'); ?>	
 		
 	<article <?php post_class("content-section"); ?>>
+	
+	<?php include (STYLESHEETPATH . '/_/inc/sections/global-telephone-number.inc'); ?>		
+	
+	<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.inc'); ?>	
+	
 		<div class="container-fluid">
 						
 			<div class="entry wide-entry">		

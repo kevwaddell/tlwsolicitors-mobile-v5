@@ -9,7 +9,7 @@ $fax = get_field('main_fax', 'options');
 $email = get_field('main_email', 'options');
 //echo '<pre class="debug">';print_r($img);echo '</pre>';
 ?>
-<section class="contact-links full-bg-img" data-src="<?php echo $banner_feat_full_src[0]; ?>" style="background-image: url(<?php echo $banner_feat_thumb_src[0];?>)">
+<section class="contact-links contact-us-banner full-bg-img" data-src="<?php echo $banner_feat_full_src[0]; ?>" style="background-image: url(<?php echo $banner_feat_thumb_src[0];?>)">
 	<div class="container-fluid">
 		<div class="intro">
 			<p class="header text-center">We can help 24/7 365 days a year</p>

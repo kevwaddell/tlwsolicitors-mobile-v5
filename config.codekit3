@@ -501,6 +501,12 @@
 		"sM": 0,
 		"sU": 0
 		},
+	"\/_\/css\/less\/criticalCSS.less.sb-71df9f80-ESxgr7": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_\/css\/less\/criticalCSS.less.sb-71df9f80-ESxgr7",
+		"oF": 0
+		},
 	"\/_\/css\/less\/custom-editor-style.less": {
 		"aP": 0,
 		"bl": 0,
@@ -909,6 +915,16 @@
 		"sM": 0,
 		"sU": 0
 		},
+	"\/_\/css\/merged-style.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/_\/css\/merged-style-min.css",
+		"oF": 1,
+		"oS": 0
+		},
 	"\/_\/css\/offline.css": {
 		"aP": 0,
 		"bl": 0,
@@ -1175,12 +1191,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/_\/inc\/landing-page\/head-html.inc",
-		"oF": 0
-		},
-	"\/_\/inc\/landing-page\/head-html.inc.sb-948e6424-6aaVlc": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/_\/inc\/landing-page\/head-html.inc.sb-948e6424-6aaVlc",
 		"oF": 0
 		},
 	"\/_\/inc\/posts\/archive-dropdown.inc": {
