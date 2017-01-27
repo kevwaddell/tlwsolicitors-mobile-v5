@@ -20,7 +20,7 @@
 	})(window,document,'script','dataLayer','GTM-PLBR4F');</script>
 	<!-- End Google Tag Manager -->
 	<?php } ?>
-
+	<style>body{opacity: 0;}</style>
 	<meta charset="<?php bloginfo('charset'); ?>">
 
 	<meta name="viewport" content="user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
@@ -36,6 +36,7 @@
 	
 	<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/_/img/favicon.ico">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+	
 	<style><?php readfile(get_stylesheet_directory() . '/_/css/criticalCSS.css')."</style>"; ?></style>
 <!-- 	<script id="loadcss"><?php readfile(get_stylesheet_directory() . '/_/js/loadCSS-min.js');  ?></script> -->
 	

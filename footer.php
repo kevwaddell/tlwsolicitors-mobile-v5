@@ -33,9 +33,9 @@
         var addStylesNode = document.getElementById("deferred-styles");
         var replacement = document.createElement("div");
         replacement.innerHTML = addStylesNode.textContent;
-        //document.body.appendChild(replacement)
+        document.body.appendChild(replacement)
         addStylesNode.parentElement.removeChild(addStylesNode);
-        //document.body.classList.remove("atfc-mobile-css");
+        document.body.classList.remove("atfc-mobile-css");
       };
      
       var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
