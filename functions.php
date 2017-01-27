@@ -177,7 +177,7 @@ if (!is_admin()) {
 		$dom = new DOMDocument();
 	    $dom->loadHTML($html);
 	    $a = $dom->getElementById($handle.'-css');	
-		return "<noscript id=\"deferred-styles\"><link rel=\"". $a->getAttribute('rel') ."\" type=\"text/css\" href=\"".$a->getAttribute('href')."\"/></noscript>";
+		return "<script>loadCSS('" . $a->getAttribute('href') . "',document.getElementById('loadcss'),'" . $a->getAttribute('media') . "');</script>\n";
 		}
    }
    

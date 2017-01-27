@@ -38,7 +38,7 @@
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	
 	<style><?php readfile(get_stylesheet_directory() . '/_/css/criticalCSS.css')."</style>"; ?></style>
-<!-- 	<script id="loadcss"><?php readfile(get_stylesheet_directory() . '/_/js/loadCSS-min.js');  ?></script> -->
+	<script id="loadcss"><?php readfile(get_stylesheet_directory() . '/_/js/loadCSS-min.js');  ?></script>
 	
 	<?php
 	//Check to see if form is active then add appropriate gravity form scripts
