@@ -131,60 +131,42 @@ function show_all_styles() {
 function custom_dequeue() {
     wp_dequeue_style('autoptimize-toolbar');
     wp_deregister_style('autoptimize-toolbar');
+    wp_dequeue_script('autoptimize-toolbar');
+    wp_deregister_script('autoptimize-toolbar');
 }
 
 add_action( 'wp_enqueue_scripts', 'custom_dequeue', 9999 );
 add_action( 'wp_head', 'custom_dequeue', 9999 );
 
+remove_filter( 'the_content', 'amtsp_make_phone_clickable', 20);
+	
+add_filter( 'gform_init_scripts_footer', '__return_true' );
+	
 function add_async_attribute($tag, $handle) {
-	if (!is_admin()) {
-	
-	add_filter( 'gform_init_scripts_footer', '__return_true' );
-	
 	//echo '<pre>';print_r($handle);echo '</pre>';
-   
-   // add script handles to the array below
-   $scripts_to_asyc = array(    
-   'addtoany',
-   'gform_json',
-   'gform_gravityforms',
-   'gform_conditional_logic',
-   'gform_placeholder',
-   'tml-themed-profiles',
-   'jquery',
-   'bootstrap-min',
-   'jquery-cookie',
-   'slim-scroll', 
-   'bootstrap-select',
-   'functions',
-   'wp-embed'
-   );
-   
-    foreach($scripts_to_asyc as $asyn_script) {
-      if ($asyn_script === $handle) {
-         return str_replace(' src', ' defer src', $tag);
-      }
-   }
-   return $tag;
-
+	if (!is_admin()) {
+	return str_replace(' src', ' defer src', $tag);
 	}
 }
 
 add_filter('script_loader_tag', 'add_async_attribute', 10, 2);
 
 add_filter('style_loader_tag', 'link_to_loadCSS_script',10,3);
-function link_to_loadCSS_script($html, $handle, $href ) {
 
 if (!is_admin()) {
-		if ($handle == 'merged-style') {
-		$dom = new DOMDocument();
-	    $dom->loadHTML($html);
-	    $a = $dom->getElementById($handle.'-css');	
-		//return "<script>loadCSS('" . $a->getAttribute('href') . "',document.getElementById('loadcss'),'" . $a->getAttribute('media') . "');</script>\n";
-		return "<noscript id=\"deferred-styles\"><link rel=\"". $a->getAttribute('rel') ."\" type=\"text/css\" href=\"".$a->getAttribute('href')."\"/></noscript>";
-		}
-   }
-   
+	function link_to_loadCSS_script($html, $handle, $href ) {
+	
+	
+			if ($handle == 'merged-style') {
+			$dom = new DOMDocument();
+		    $dom->loadHTML($html);
+		    $a = $dom->getElementById($handle.'-css');	
+			//return "<script>loadCSS('" . $a->getAttribute('href') . "',document.getElementById('loadcss'),'" . $a->getAttribute('media') . "');</script>\n";
+			return "<noscript id=\"deferred-styles\"><link rel=\"". $a->getAttribute('rel') ."\" type=\"text/css\" href=\"".$a->getAttribute('href')."\"/></noscript>";
+			}
+	
+	   
+	}
 }
 
 function ewp_remove_script_version( $src ){

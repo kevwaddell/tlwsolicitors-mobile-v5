@@ -18,6 +18,7 @@
 		</noscript>
 		
 		<?php wp_footer(); ?>
+<!--
 		<script>
       var loadDeferredStyles = function() {
         var addStylesNode = document.getElementById("deferred-styles");
@@ -32,5 +33,6 @@
 	      raf(function() { window.setTimeout(loadDeferredStyles, 0);});
      } else { window.addEventListener('load', loadDeferredStyles); }
     </script>
+-->
 	</body>
 </html>
