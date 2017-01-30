@@ -87,7 +87,7 @@
       var loadDeferredStyles = function() {
         var addStylesNode = document.getElementById("deferred-styles");
         var replacement = document.createElement("div");
-        replacement.innerHTML = addStylesNode.textContent;
+        replacement.innerHTML = addStylesNode.textContent.replace("none","stylesheet");
         document.body.appendChild(replacement);
         addStylesNode.parentElement.removeChild(addStylesNode);
         document.body.classList.remove("atfc-mobile-css");
