@@ -4,54 +4,52 @@
 update_option('siteurl','http://tlwsolicitors.dev');
 update_option('home','http://tlwsolicitors.dev');
 */
-
-add_action( 'after_setup_theme', 'editor_styles' );
-
-function tlw_scripts() {
-	
-	// Load stylesheets.
-	if (!is_admin()) {
-		wp_enqueue_style( 'styles', get_stylesheet_directory_uri().'/_/css/styles.css', null, filemtime( get_stylesheet_directory().'/_/css/styles.css' ), '(min-width: 320px)' );
+if (!is_admin()) {
+	function tlw_scripts() {
 		
-		if (is_page() || is_single()) {
-		wp_dequeue_style('wprssmi_template_styles');	
-		}
+		// Load stylesheets.
+		if (!is_admin()) {
+			wp_enqueue_style( 'styles', get_stylesheet_directory_uri().'/_/css/styles.css', null, filemtime( get_stylesheet_directory().'/_/css/styles.css' ), '(min-width: 320px)' );
+			
+			if (is_page() || is_single()) {
+			wp_dequeue_style('wprssmi_template_styles');	
+			}
+			
+			if( !has_shortcode( $post->post_content, 'theme-my-login') ) {
+			wp_dequeue_style('theme-my-login');
+			}
+			
+	/*
+			if ( isset($_COOKIE['catAccCookies']) ) {
+			wp_dequeue_style('cookie-consent-style');
+			}
+	*/
 		
-		if( !has_shortcode( $post->post_content, 'theme-my-login') ) {
-		wp_dequeue_style('theme-my-login');
+			// Load JS
+			$functions_dep = array(
+			'jquery',
+			'bootstrap-select', 
+			'jquery-cookie', 
+			'slim-scroll'
+			);
+			//wp_enqueue_script( 'jquery' );
+			//wp_enqueue_script( 'jquery-ui-core' );
+			wp_deregister_script('jquery-core');
+			wp_deregister_script('jquery');
+			wp_enqueue_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js', array(), '3.0.0', true);
+			wp_enqueue_script( 'modernizr-min', get_stylesheet_directory_uri() . '/_/js/modernizr-min.js', array(), '2.8.3', true );
+			wp_enqueue_script( 'bootstrap-min', get_stylesheet_directory_uri() . '/_/js/bootstrap-min.js', array('jquery'), '3.3.7', true );
+			wp_enqueue_script( 'jquery-cookie', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js', array('jquery'), '1.4.1', true );
+			wp_enqueue_script( 'slim-scroll', 'https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.6/jquery.slimscroll.min.js', array('jquery'), '1.3.6', true );
+			wp_enqueue_script( 'bootstrap-select', 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js', array('jquery'), '1.11.2', true );
+			wp_enqueue_script( 'functions', get_stylesheet_directory_uri() . '/_/js/functions-min.js', $functions_dep, filemtime( get_stylesheet_directory().'/_/js/functions.js' ), true );
 		}
-		
-/*
-		if ( isset($_COOKIE['catAccCookies']) ) {
-		wp_dequeue_style('cookie-consent-style');
-		}
-*/
-	
-		// Load JS
-		$functions_dep = array(
-		'jquery',
-		'bootstrap-select', 
-		'jquery-cookie', 
-		'slim-scroll'
-		);
-		//wp_enqueue_script( 'jquery' );
-		//wp_enqueue_script( 'jquery-ui-core' );
-		wp_deregister_script('jquery-core');
-		wp_deregister_script('jquery');
-		wp_enqueue_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js', array(), '3.0.0', true);
-		wp_enqueue_script( 'modernizr-min', get_stylesheet_directory_uri() . '/_/js/modernizr-min.js', array(), '2.8.3', true );
-		wp_enqueue_script( 'bootstrap-min', get_stylesheet_directory_uri() . '/_/js/bootstrap-min.js', array('jquery'), '3.3.7', true );
-		wp_enqueue_script( 'jquery-cookie', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js', array('jquery'), '1.4.1', true );
-		wp_enqueue_script( 'slim-scroll', 'https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.6/jquery.slimscroll.min.js', array('jquery'), '1.3.6', true );
-		wp_enqueue_script( 'bootstrap-select', 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js', array('jquery'), '1.11.2', true );
-		wp_enqueue_script( 'functions', get_stylesheet_directory_uri() . '/_/js/functions-min.js', $functions_dep, filemtime( get_stylesheet_directory().'/_/js/functions.js' ), true );
 	}
+	add_action( 'wp_enqueue_scripts', 'tlw_scripts' );
 }
-add_action( 'wp_enqueue_scripts', 'tlw_scripts' );
-
-add_action('wp_print_styles', 'show_all_styles');
-function show_all_styles() {
-	if (!is_admin()) {
+if (!is_admin()) {
+	add_action('wp_print_styles', 'show_all_styles');
+	function show_all_styles() {
 	
 	// use global to call variable outside function
 	global $wp_styles;
@@ -125,35 +123,38 @@ function show_all_styles() {
 		wp_deregister_style($handle);
 	}
 
-	}
-}
-
-function custom_dequeue() {
-    wp_dequeue_style('autoptimize-toolbar');
-    wp_deregister_style('autoptimize-toolbar');
-    wp_dequeue_script('autoptimize-toolbar');
-    wp_deregister_script('autoptimize-toolbar');
-}
-
-add_action( 'wp_enqueue_scripts', 'custom_dequeue', 9999 );
-add_action( 'wp_head', 'custom_dequeue', 9999 );
-
-remove_filter( 'the_content', 'amtsp_make_phone_clickable', 20);
 	
-add_filter( 'gform_init_scripts_footer', '__return_true' );
-	
-function add_async_attribute($tag, $handle) {
-	//echo '<pre>';print_r($handle);echo '</pre>';
-	if (!is_admin()) {
-	return str_replace(' src', ' defer src', $tag);
-	}
 }
-
-add_filter('script_loader_tag', 'add_async_attribute', 10, 2);
-
-add_filter('style_loader_tag', 'link_to_loadCSS_script',10,3);
+}
 
 if (!is_admin()) {
+	function custom_dequeue() {
+	    wp_dequeue_style('autoptimize-toolbar');
+	    wp_deregister_style('autoptimize-toolbar');
+	    wp_dequeue_script('autoptimize-toolbar');
+	    wp_deregister_script('autoptimize-toolbar');
+	}
+	
+	add_action( 'wp_enqueue_scripts', 'custom_dequeue', 9999 );
+	add_action( 'wp_head', 'custom_dequeue', 9999 );
+	
+	remove_filter( 'the_content', 'amtsp_make_phone_clickable', 20);
+		
+	add_filter( 'gform_init_scripts_footer', '__return_true' );
+		
+	function add_async_attribute($tag, $handle) {
+		//echo '<pre>';print_r($handle);echo '</pre>';
+		return str_replace(' src', ' defer src', $tag);
+	}
+	
+	add_filter('script_loader_tag', 'add_async_attribute', 10, 2);
+}
+
+if (!is_admin()) {
+
+	add_filter('style_loader_tag', 'link_to_loadCSS_script',10,3);
+
+
 	function link_to_loadCSS_script($html, $handle, $href ) {
 	
 	
